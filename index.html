@@ -1,0 +1,1841 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Mapa completo del régimen sancionador y de la nueva supervisión de la LFPIORPI: quién revisa, con qué plazos, cuánto cuesta cada incumplimiento y qué salidas quedan. GMC360 · 360Educa.">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Dónde multa el SAT">
+<meta property="og:description" content="Régimen sancionador y supervisión de la LFPIORPI, con montos en pesos y fundamento a la vista. Jornada360 · 26 de agosto de 2026.">
+<meta property="og:type" content="website">
+<style>*{margin:0;padding:0}</style>
+<title>Dónde multa el SAT · GMC360 · 360Educa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+
+<style>
+/* ============ TOKENS · diseño oscuro por defecto, claro completo ============ */
+:root{
+  --ground:#0B100D; --surface:#131A15; --surface-2:#18211A; --raise:#1E2921;
+  --line:#26332A; --line-soft:#1C251E;
+  --ink:#E8F0EA; --ink-2:#A9BCAF; --ink-3:#78897E;
+  --brand:#8CC63F; --brand-2:#B6E06E; --brand-ink:#0B100D;
+  --n1:#E4B33C; --n2:#E8863C; --n3:#D6453D; --future:#6E9EBF;
+  --n1-bg:#E4B33C1F; --n2-bg:#E8863C1F; --n3-bg:#D6453D1F; --future-bg:#6E9EBF1A;
+  --shadow:0 1px 0 #ffffff08 inset;
+}
+@media (prefers-color-scheme:light){
+  :root:not([data-theme="dark"]){
+    --ground:#F6F8F4; --surface:#FFFFFF; --surface-2:#EEF2EA; --raise:#E6ECE1;
+    --line:#D3DBCF; --line-soft:#E4E9E0;
+    --ink:#11170F; --ink-2:#4A574C; --ink-3:#6C7A6E;
+    --brand:#4C7A17; --brand-2:#3C6210; --brand-ink:#FFFFFF;
+    --n1:#8A6100; --n2:#A94D14; --n3:#9E1F19; --future:#255C80;
+    --n1-bg:#8A610014; --n2-bg:#A94D1414; --n3-bg:#9E1F1914; --future-bg:#255C8012;
+    --shadow:0 1px 0 #00000005 inset;
+  }
+}
+:root[data-theme="light"]{
+  --ground:#F6F8F4; --surface:#FFFFFF; --surface-2:#EEF2EA; --raise:#E6ECE1;
+  --line:#D3DBCF; --line-soft:#E4E9E0;
+  --ink:#11170F; --ink-2:#4A574C; --ink-3:#6C7A6E;
+  --brand:#4C7A17; --brand-2:#3C6210; --brand-ink:#FFFFFF;
+  --n1:#8A6100; --n2:#A94D14; --n3:#9E1F19; --future:#255C80;
+  --n1-bg:#8A610014; --n2-bg:#A94D1414; --n3-bg:#9E1F1914; --future-bg:#255C8012;
+  --shadow:0 1px 0 #00000005 inset;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:"Source Serif 4",Georgia,"Times New Roman",serif;
+  font-size:17px; line-height:1.62; -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4,.sans{font-family:"IBM Plex Sans Condensed","Helvetica Neue",Arial,sans-serif}
+.mono,code,.num{font-family:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;font-variant-numeric:tabular-nums}
+a{color:var(--brand);text-decoration-thickness:1px;text-underline-offset:3px}
+a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+
+/* ============ ESTRUCTURA ============ */
+.shell{max-width:1180px;margin:0 auto;padding:0 22px;min-width:0}
+body{overflow-x:hidden}
+.layout{display:grid;grid-template-columns:minmax(0,1fr);gap:0;min-width:0}
+@media(min-width:1040px){
+  .layout{grid-template-columns:216px minmax(0,1fr);gap:56px;align-items:start}
+  .rail{position:sticky;top:0;padding:48px 0;max-height:100vh;overflow-y:auto}
+}
+.rail{display:none}
+@media(min-width:1040px){.rail{display:block}}
+.rail ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
+.rail a{
+  display:grid;grid-template-columns:22px 1fr;gap:8px;align-items:baseline;
+  font-family:"IBM Plex Sans Condensed",sans-serif;font-size:13.5px;line-height:1.3;
+  color:var(--ink-2);text-decoration:none;padding:7px 8px;border-left:2px solid transparent;
+}
+.rail a:hover{color:var(--ink);background:var(--surface);border-left-color:var(--brand)}
+.rail a span{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink-3)}
+.rail .rail-t{font-family:"IBM Plex Sans Condensed",sans-serif;font-size:10.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ink-3);padding:0 8px 10px;border-bottom:1px solid var(--line-soft);margin-bottom:10px}
+
+main{padding:0 0 96px;min-width:0}
+section{padding:52px 0;border-top:1px solid var(--line-soft)}
+section:first-of-type{border-top:0}
+.prose{max-width:69ch}
+.prose p{margin:0 0 1.05em}
+.prose p:last-child{margin-bottom:0}
+
+/* ============ TIPOGRAFÍA ============ */
+.eyebrow{font-family:"IBM Plex Sans Condensed",sans-serif;font-size:11px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--ink-3);margin:0 0 12px}
+h2{font-size:clamp(26px,3.4vw,36px);line-height:1.1;margin:0 0 6px;font-weight:700;letter-spacing:-.015em;text-wrap:balance}
+h3{font-size:20px;line-height:1.25;margin:34px 0 10px;font-weight:600;letter-spacing:-.005em;text-wrap:balance}
+h4{font-size:15px;line-height:1.3;margin:0 0 6px;font-weight:600;letter-spacing:.005em}
+.dek{color:var(--ink-2);font-size:18px;margin:0 0 26px;max-width:64ch;font-style:italic}
+.sec-n{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--brand);letter-spacing:.06em}
+
+/* ============ CITAS Y ETIQUETAS ============ */
+.f{font-family:"IBM Plex Mono",monospace;font-size:.82em;color:var(--ink-2);white-space:nowrap}
+.tag{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.06em;
+  padding:2px 7px;border:1px solid var(--line);color:var(--ink-2);background:var(--surface-2);vertical-align:2px}
+.tag.l{border-color:var(--brand);color:var(--brand)}
+.tag.n1{color:var(--n1);border-color:var(--n1);background:var(--n1-bg)}
+.tag.n2{color:var(--n2);border-color:var(--n2);background:var(--n2-bg)}
+.tag.n3{color:var(--n3);border-color:var(--n3);background:var(--n3-bg)}
+.tag.fu{color:var(--future);border-color:var(--future);background:var(--future-bg)}
+
+blockquote{margin:22px 0;padding:0 0 0 18px;border-left:2px solid var(--brand);
+  font-style:italic;color:var(--ink);font-size:18px}
+blockquote .src{display:block;font-style:normal;font-family:"IBM Plex Mono",monospace;
+  font-size:11.5px;color:var(--ink-3);margin-top:8px;letter-spacing:.03em}
+
+.nota{background:var(--surface);border:1px solid var(--line);padding:16px 18px;margin:22px 0;
+  font-size:15.5px;line-height:1.55;box-shadow:var(--shadow)}
+.nota .k{display:block;font-family:"IBM Plex Sans Condensed",sans-serif;font-weight:600;
+  font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--brand);margin-bottom:7px}
+.nota.alerta{border-left:3px solid var(--n3)}
+.nota.alerta .k{color:var(--n3)}
+.nota p{margin:0 0 .8em}.nota p:last-child{margin:0}
+
+/* ============ TABLAS ============ */
+
+
+.curso-band{margin:30px 0 4px;border:1px solid var(--brand);border-left-width:5px;border-radius:4px;
+  padding:18px 22px;background:var(--surface)}
+.cb-k{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--brand);margin-bottom:8px}
+.cb-t{font-size:27px;line-height:1.1;letter-spacing:-.5px;font-weight:700;margin-bottom:5px}
+.cb-s{font-size:14.5px;line-height:1.45;color:var(--muted)}
+@media(max-width:640px){.cb-t{font-size:22px}}
+.dl{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:14px;margin:26px 0 18px}
+.dlc{display:block;border:1px solid var(--line);background:var(--surface);border-radius:4px;padding:16px 17px;
+     text-decoration:none;color:inherit;transition:border-color .15s,transform .15s}
+.dlc:hover{border-color:var(--brand);transform:translateY(-1px)}
+.dlc.destacado{border-left:4px solid var(--brand)}
+.dlk{display:block;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;
+     text-transform:uppercase;color:var(--brand);margin-bottom:7px}
+.dlc b{display:block;font-size:15px;line-height:1.3;margin-bottom:6px}
+.dld{display:block;font-size:12.5px;line-height:1.5;color:var(--muted)}
+.dld a{color:var(--brand)}
+.nota-dl{font-size:12px;line-height:1.6;color:var(--muted);border-top:1px solid var(--line-soft);padding-top:14px}
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%;margin:24px 0;border:1px solid var(--line);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:14.5px}
+caption{text-align:left;font-family:"IBM Plex Sans Condensed",sans-serif;font-size:12px;color:var(--ink-3);
+  padding:12px 14px;border-bottom:1px solid var(--line-soft);letter-spacing:.03em}
+th,td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--line-soft);vertical-align:top}
+thead th{font-family:"IBM Plex Sans Condensed",sans-serif;font-weight:600;font-size:11px;
+  letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3);background:var(--surface-2)}
+tbody tr:last-child td{border-bottom:0}
+td.n,th.n{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* ============ FICHAS (registros del expediente) ============ */
+.fichas{display:flex;flex-direction:column;margin:26px 0;border-top:1px solid var(--line)}
+.ficha{display:grid;grid-template-columns:1fr;gap:8px;padding:18px 0;border-bottom:1px solid var(--line-soft)}
+@media(min-width:720px){.ficha{grid-template-columns:1fr 200px;gap:28px;align-items:start}}
+.ficha .cuerpo p{margin:0;font-size:15.5px;color:var(--ink-2);line-height:1.55}
+.ficha .cuerpo p strong{color:var(--ink)}
+.ficha .monto{font-family:"IBM Plex Mono",monospace;font-size:13px;line-height:1.45}
+.ficha .monto .uma{display:block;font-size:15px;color:var(--ink);font-weight:600}
+.ficha .monto .mxn{display:block;color:var(--ink-3);font-size:12px;margin-top:2px}
+.ficha .monto .bar{display:block;height:3px;margin:8px 0 8px;background:var(--line)}
+.ficha .monto .bar i{display:block;height:3px}
+.esc1 .bar i{width:14%;background:var(--n1)}
+.esc2 .bar i{width:38%;background:var(--n2)}
+.esc3 .bar i{width:100%;background:var(--n3)}
+
+/* ============ LÍNEA DE PROCEDIMIENTO ============ */
+.track{overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%;margin:26px 0;padding-bottom:6px}
+.track-in{display:flex;gap:0;min-width:760px}
+.paso{flex:1;min-width:150px;border-left:1px solid var(--line);padding:0 16px 0 14px;position:relative}
+.paso:first-child{border-left:2px solid var(--brand)}
+.paso .dias{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:600;color:var(--ink);line-height:1}
+.paso .dias small{font-size:11px;color:var(--ink-3);display:block;margin-top:5px;letter-spacing:.08em;text-transform:uppercase;font-family:"IBM Plex Sans Condensed",sans-serif}
+.paso h4{margin:12px 0 5px}
+.paso p{margin:0;font-size:13.5px;color:var(--ink-2);line-height:1.5}
+.paso .f{display:block;margin-top:8px;font-size:11px}
+.paso.fin{border-left-color:var(--n3)}
+.paso.fin .dias{color:var(--n3)}
+
+/* ============ HERO ============ */
+.hero{padding:64px 0 44px;border-top:0}
+.kicker{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:22px}
+.kicker .b{font-family:"IBM Plex Sans Condensed",sans-serif;font-size:11px;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--brand-ink);background:var(--brand);padding:4px 9px;font-weight:600}
+.kicker .d{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--ink-3);letter-spacing:.04em}
+h1{font-size:clamp(38px,7.4vw,74px);line-height:.98;letter-spacing:-.032em;margin:0 0 18px;font-weight:700;text-wrap:balance}
+h1 em{font-style:normal;color:var(--brand)}
+.lede{font-size:clamp(18px,2.1vw,21px);color:var(--ink-2);max-width:60ch;margin:0 0 34px;line-height:1.5}
+.cifras{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:8px}
+@media(min-width:760px){.cifras{grid-template-columns:repeat(4,1fr)}}
+.cifra{background:var(--ground);padding:16px 16px 18px}
+.cifra b{display:block;font-family:"IBM Plex Mono",monospace;font-size:clamp(20px,2.6vw,27px);
+  font-weight:600;color:var(--ink);letter-spacing:-.02em;line-height:1.1}
+.cifra span{display:block;font-family:"IBM Plex Sans Condensed",sans-serif;font-size:11.5px;
+  color:var(--ink-3);margin-top:7px;line-height:1.35}
+
+/* ============ HERRAMIENTAS ============ */
+.tool{background:var(--surface);border:1px solid var(--line);padding:22px;margin:28px 0}
+.tool h3{margin-top:0}
+.campo{display:block;margin:0 0 16px}
+.campo>span{display:block;font-family:"IBM Plex Sans Condensed",sans-serif;font-size:11px;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin-bottom:6px}
+select,input[type=number],input[type=text]{
+  width:100%;background:var(--ground);color:var(--ink);border:1px solid var(--line);
+  padding:9px 11px;font-family:"IBM Plex Mono",monospace;font-size:14px;border-radius:0}
+.grid2{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:620px){.grid2{grid-template-columns:1fr 1fr}}
+button{font-family:"IBM Plex Sans Condensed",sans-serif;font-size:13px;font-weight:600;letter-spacing:.06em;
+  text-transform:uppercase;background:var(--brand);color:var(--brand-ink);border:0;padding:11px 20px;cursor:pointer}
+button.ghost{background:transparent;color:var(--ink-2);border:1px solid var(--line)}
+button:hover{filter:brightness(1.08)}
+.res{margin-top:20px;border-top:1px solid var(--line);padding-top:18px}
+.res .rango{font-family:"IBM Plex Mono",monospace;font-size:clamp(22px,4vw,34px);font-weight:600;
+  letter-spacing:-.02em;line-height:1.15;color:var(--ink)}
+.res .sub{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--ink-3);margin-top:6px}
+.res ul{margin:16px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px}
+.res li{font-size:14px;color:var(--ink-2);padding-left:14px;border-left:2px solid var(--line);line-height:1.5}
+.res li b{color:var(--ink);font-weight:600}
+.chk{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:1px solid var(--line-soft);font-size:14.5px;line-height:1.45}
+.chk:last-of-type{border-bottom:0}
+.chk input{margin:5px 0 0;accent-color:var(--brand);width:16px;height:16px;flex:0 0 auto}
+.chk label{cursor:pointer;color:var(--ink-2)}
+.chk label b{color:var(--ink);font-weight:600}
+.chk label .f{display:block;margin-top:2px}
+
+/* ============ SEMÁFORO / MARCADOR ============ */
+.marcador{display:flex;flex-wrap:wrap;gap:1px;background:var(--line);border:1px solid var(--line);margin:22px 0}
+.marcador div{flex:1 1 140px;background:var(--surface);padding:14px 16px}
+.marcador b{display:block;font-family:"IBM Plex Mono",monospace;font-size:22px;line-height:1}
+.marcador span{display:block;font-family:"IBM Plex Sans Condensed",sans-serif;font-size:11px;
+  color:var(--ink-3);margin-top:6px;letter-spacing:.04em}
+
+/* ============ CIERRE ============ */
+.cierre{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--brand);padding:34px 26px;margin-top:46px}
+.cierre h2{margin-bottom:12px}
+footer{border-top:1px solid var(--line-soft);padding:30px 0 10px;font-size:12.5px;color:var(--ink-3);line-height:1.6}
+footer p{margin:0 0 .7em;max-width:82ch}
+
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:12px;top:12px;background:var(--brand);color:var(--brand-ink);padding:8px 14px;z-index:9}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+</style>
+
+</head>
+<body>
+<a class="skip" href="#s1">Ir al contenido</a>
+
+<div class="shell">
+<div class="layout">
+
+<nav class="rail" aria-label="Índice">
+  <p class="rail-t">Expediente</p>
+  <ol>
+    <li><a href="#s1"><span>01</span>Quién supervisa</a></li>
+    <li><a href="#s2"><span>02</span>Las cuatro puertas</a></li>
+    <li><a href="#s3"><span>03</span>El procedimiento</a></li>
+    <li><a href="#s4"><span>04</span>El día de la visita</a></li>
+    <li><a href="#s5"><span>05</span>Facultades nuevas</a></li>
+    <li><a href="#s6"><span>06</span>Catálogo · art. 53</a></li>
+    <li><a href="#s7"><span>07</span>Los tres escalones</a></li>
+    <li><a href="#s8"><span>08</span>Calculadora</a></li>
+    <li><a href="#s9"><span>09</span>Más allá de la multa</a></li>
+    <li><a href="#s10"><span>10</span>La salida · art. 55</a></li>
+    <li><a href="#s11"><span>11</span>Defensa</a></li>
+    <li><a href="#s12"><span>12</span>La frontera penal</a></li>
+    <li><a href="#s13"><span>13</span>Hoy y 2027</a></li>
+    <li><a href="#s14"><span>14</span>Autodiagnóstico</a></li>
+    <li><a href="#s15"><span>15</span>Descargables</a></li>
+  </ol>
+</nav>
+
+<main>
+
+<!-- ══════════════ HERO ══════════════ -->
+<section class="hero">
+  <div class="kicker">
+    <span class="b">Jornada360</span>
+    <span class="d">Miércoles 26 de agosto de 2026 · 11:00 h CDMX</span>
+  </div>
+  <h1>Dónde multa <em>el SAT</em></h1>
+  <p class="lede">El mapa completo del régimen sancionador y de la nueva supervisión de la
+    LFPIORPI: quién revisa, por dónde entra, con qué plazos, cuánto cuesta cada
+    incumplimiento y qué salidas quedan. Con los montos convertidos a pesos y el fundamento
+    a la vista en cada afirmación.</p>
+
+  <div class="cifras">
+    <div class="cifra"><b>200 – 65,000</b><span>Veces la UMA diaria. El rango completo de multa del artículo 54</span></div>
+    <div class="cifra"><b>5 años</b><span>Lo que puede abarcar una verificación hacia atrás (art. 36 de la Ley)</span></div>
+    <div class="cifra"><b>45–50 días</b><span>Hábiles: del requerimiento a la resolución por la vía del Reglamento. 30 son plazos del SAT y 15 del sujeto obligado</span></div>
+    <div class="cifra"><b>$117.31</b><span>Valor diario de la UMA vigente desde el 1 de febrero de 2026</span></div>
+  </div>
+
+  <div class="curso-band">
+    <div class="cb-k">Curso gratuito · desde el lunes 31 de agosto de 2026</div>
+    <div class="cb-t">Antes de que llegue el SAT</div>
+    <div class="cb-s">Guía práctica de supervisión, multas y defensa en la LFPIORPI</div>
+  </div>
+
+  <div class="nota" style="margin-top:30px">
+    <span class="k">Cómo leer este micrositio</span>
+    <p>Cada afirmación trae su fundamento entre paréntesis con esta convención:
+      <span class="tag l">L</span> Ley &nbsp;·&nbsp; <span class="tag">R</span> Reglamento &nbsp;·&nbsp;
+      <span class="tag">RCG</span> Reglas de Carácter General &nbsp;·&nbsp; <span class="tag">LFPA</span> Ley Federal de Procedimiento Administrativo.
+      Los montos se expresan en veces el valor diario de la UMA y se convierten con
+      <b>$117.31</b>; deben recalcularse con el valor vigente al momento del acto.</p>
+  </div>
+</section>
+
+<!-- ══════════════ 01 ══════════════ -->
+<section id="s1">
+  <p class="eyebrow"><span class="sec-n">01</span> &nbsp;Reparto de papeles</p>
+  <h2>Quién supervisa, quién sanciona y quién analiza</h2>
+  <p class="dek">La reforma no creó un supervisor nuevo. Le puso nombre al que ya existía y le
+    amplió las facultades.</p>
+
+  <div class="prose">
+    <p>Hasta 2025 la ley hablaba de «la Secretaría» sin decir quién dentro de ella. El
+      artículo <b>22 Bis</b>, adicionado el 16 de julio de 2025, cerró la duda: la supervisión,
+      verificación y vigilancia de quienes realizan Actividades Vulnerables —<b>con excepción de
+      las Entidades Financieras</b> de la Sección Primera del Capítulo III, que siguen a cargo de la
+      CNBV, la CNSF y la CONSAR— corresponde a la Secretaría de Hacienda
+      <span class="f">(22 Bis L)</span>. Y el Reglamento reformado el 27 de
+      marzo de 2026 repartió el trabajo con una precisión que no existía antes.</p>
+  </div>
+
+  <div class="tw">
+    <table>
+      <caption>Reparto de atribuciones tras la reforma al Reglamento (DOF 27-mar-2026)</caption>
+      <thead><tr><th style="width:16%">Órgano</th><th>Qué le toca</th><th style="width:22%">Fundamento</th></tr></thead>
+      <tbody>
+        <tr><td><b>SAT</b></td>
+          <td>Integrar y mantener el padrón · recibir Avisos e Informes y remitirlos a la UIF ·
+            practicar las <b>visitas de verificación</b> y los requerimientos · <b>vigilar</b> Avisos,
+            Informes y dictámenes de auditoría y requerir su cumplimiento, incluida la
+            regularización de observaciones · <b>sustanciar y resolver el procedimiento sancionador
+            e imponer las sanciones</b> · informar a las autoridades competentes en los casos de
+            los artículos 56 a 59 · pedir auxilio de la fuerza pública · <b>notificar por vía
+            electrónica</b> · requerir el dictamen de auditoría y su documentación soporte</td>
+          <td class="f">4, fr. I a XI R</td></tr>
+        <tr><td><b>UIF</b></td>
+          <td>Interpretar administrativamente · requerir información a quienes realizan
+            Actividades Vulnerables · expedir los formatos oficiales de Avisos e Informes · emitir
+            el formato y el medio para integrar el listado de Personas Políticamente Expuestas
+            (3, fr. III Bis) y mantener la Lista (45 Bis) · determinar medios de cumplimiento
+            alternativos · resguardar los <b>Avisos e Informes</b>, por conducto del SAT</td>
+          <td class="f">3, fr. I a VII<br>y 45 Bis R</td></tr>
+        <tr><td><b>Comisiones</b></td>
+          <td>CNBV, CNSF y CONSAR supervisan a las Entidades Financieras. Las violaciones al
+            artículo 15 se sancionan conforme a las leyes financieras especiales, no por este
+            capítulo</td>
+          <td class="f">16 L · 52, 2º pfo. L</td></tr>
+        <tr><td><b>Fiscalía</b></td>
+          <td>Investiga y persigue. La Secretaría <b>debe denunciar</b> ante la Fiscalía cualquier
+            acto u operación <b>que derive de una Actividad Vulnerable</b> y pudiera dar lugar a un
+            delito del fuero federal identificado con motivo de esta Ley</td>
+          <td class="f">40 L · 6, fr. IV L</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="nota">
+    <span class="k">El dato que cambia la conversación</span>
+    <p>El SAT <b>sustancia, resuelve e impone</b>. Conviene ser preciso con la novedad: la
+      fracción VII del artículo 4 del Reglamento aparece como <b>reformada</b> el 27 de marzo de
+      2026, no como adicionada — la atribución ya existía y lo que cambió fue su redacción. Lo
+      verdaderamente nuevo no es quién sanciona, sino <b>con qué herramientas y en qué plazos</b>:
+      el artículo 10 Bis y las dos rutas de los artículos 8 y 9. Cuando alguien dice «me llegó un
+      oficio de Hacienda», hoy quiere decir el SAT, con la misma maquinaria administrativa con la
+      que fiscaliza contribuciones.</p>
+  </div>
+</section>
+
+<!-- ══════════════ 02 ══════════════ -->
+<section id="s2">
+  <p class="eyebrow"><span class="sec-n">02</span> &nbsp;Entradas</p>
+  <h2>Las cuatro puertas por las que entra la autoridad</h2>
+  <p class="dek">Sólo una de las cuatro implica que alguien toque el timbre.</p>
+
+  <div class="fichas">
+    <div class="ficha">
+      <div class="cuerpo">
+        <h4>Puerta 1 · El requerimiento directo, sin visita</h4>
+        <p>La UIF y el SAT pueden requerir <strong>en todo momento y de manera directa</strong>
+          —a quienes realizan Actividades Vulnerables, a las Entidades Colegiadas y a los órganos
+          concentradores— la información, documentación, datos e imágenes que conserven conforme a
+          los artículos 18, fracción IV, y 27, fracción VI, <strong>o que respalden el cumplimiento
+          de cualquier obligación establecida en la Ley</strong>. Plazo de respuesta: <strong>diez
+          días hábiles</strong> contados desde el día siguiente. La autoridad <strong>puede</strong>
+          conceder prórroga de <strong>hasta</strong> cinco días hábiles más, a solicitud presentada
+          dentro del plazo original.</p>
+      </div>
+      <div class="monto"><span class="f">8 R · 6, fr. II L · 25 L</span></div>
+    </div>
+
+    <div class="ficha">
+      <div class="cuerpo">
+        <h4>Puerta 2 · La visita de verificación</h4>
+        <p>La Secretaría puede comprobar <strong>de oficio y en cualquier tiempo</strong> el
+          cumplimiento, mediante visitas o requerimientos. Se practica en el domicilio que el
+          visitado dio en su alta y registro; <strong>si no se le localiza ahí, el SAT puede
+          practicar la visita o el requerimiento, debidamente fundado y motivado, en el domicilio
+          del RFC</strong>. Y el artículo 36 <strong>limita</strong> el alcance: sólo puede abarcar
+          actos u operaciones considerados Actividades Vulnerables realizados dentro de los
+          <strong>cinco años inmediatos anteriores</strong> al inicio de la visita.</p>
+      </div>
+      <div class="monto"><span class="f">34 y 36 L · 4, fr. III R</span></div>
+    </div>
+
+    <div class="ficha">
+      <div class="cuerpo">
+        <h4>Puerta 3 · La vigilancia de Avisos, Informes y dictámenes</h4>
+        <p>El SAT vigila la presentación de Avisos e Informes y <strong>requiere su
+          cumplimiento</strong> cuando no se hace en plazo. Es vigilancia de escritorio, sobre datos
+          que ya están en el sistema. La misma facultad alcanza al dictamen de auditoría y a la
+          regularización de sus observaciones, <strong>pero esa parte todavía no opera</strong>: el
+          primer periodo auditado es el ejercicio 2028.</p>
+      </div>
+      <div class="monto"><span class="f">4, fr. IV y XI R · 12 Bis R</span></div>
+    </div>
+
+    <div class="ficha">
+      <div class="cuerpo">
+        <h4>Puerta 4 · Sus propias bases de datos</h4>
+        <p>Los hechos que consten en <strong>expedientes, documentos o bases de datos a los que
+          tenga acceso o en su poder el SAT</strong>, así como los proporcionados por otras
+          autoridades, <strong>pueden servir para motivar sus resoluciones</strong>. Y el SAT
+          <strong>presume cierta</strong> la información de los comprobantes fiscales digitales por
+          internet. Esta puerta no requiere pedirle nada al sujeto obligado.</p>
+      </div>
+      <div class="monto"><span class="f">10 Bis R</span></div>
+    </div>
+  </div>
+
+  <div class="nota alerta">
+    <span class="k">Por qué la puerta 4 es la más importante</span>
+    <p>Es la única que no avisa. Un cruce entre la facturación de una inmobiliaria, una joyería o
+      una arrendadora y los Avisos que presentó en el mismo periodo se hace desde el escritorio,
+      con información que el propio contribuyente generó. Cada operación facturada por encima del
+      umbral y sin Aviso correspondiente es una infracción del artículo 53, fracción VI, que se
+      sanciona en el escalón más alto.</p>
+  </div>
+</section>
+
+<!-- ══════════════ 03 ══════════════ -->
+<section id="s3">
+  <p class="eyebrow"><span class="sec-n">03</span> &nbsp;Procedimiento</p>
+  <h2>La vía rápida que casi nadie leyó</h2>
+  <p class="dek">Los artículos 8 y 9 del Reglamento reformado permiten sancionar sin sustanciar el
+    procedimiento de la Ley Federal de Procedimiento Administrativo.</p>
+
+  <div class="prose">
+    <p>El artículo 35 de la Ley se reescribió por completo, y con él cambió el régimen entero.
+      Antes, el desarrollo de las visitas y la imposición de sanciones se sujetaba a la LFPA. Hoy se
+      sujeta
+      <b>«a lo previsto en esta Ley, su Reglamento y las reglas de carácter general, observando
+      de manera supletoria la Ley Federal de Procedimiento Administrativo»</b> <span class="f">(35 L)</span>.
+      La LFPA pasó de ser la norma del procedimiento a ser su red de seguridad.</p>
+    <p>Y el Reglamento aprovechó el espacio. Los artículos 8 y 9 construyen dos rutas que dicen,
+      con esas palabras, <b>«sin implementar el procedimiento sancionador a que se refiere la Ley
+      Federal de Procedimiento Administrativo para la imposición de sanciones administrativas
+      previstas en la Ley»</b> y <b>«sin sujetarse a lo dispuesto por la Ley Federal de
+      Procedimiento Administrativo para la imposición de sanciones administrativas previstas en la
+      Ley»</b>. La exclusión se acota al procedimiento sancionador — no a toda la LFPA, que sigue
+      rigiendo el desarrollo material de la visita.</p>
+  </div>
+
+  <h3>Ruta A · No se atiende el requerimiento</h3>
+  <div class="track">
+    <div class="track-in">
+      <div class="paso">
+        <div class="dias">10<small>días hábiles</small></div>
+        <h4>Para responder</h4>
+        <p>Desde el día siguiente a la recepción del requerimiento.</p>
+        <span class="f">8, 1er pfo. R</span>
+      </div>
+      <div class="paso">
+        <div class="dias">+5<small>días hábiles</small></div>
+        <h4>Prórroga</h4>
+        <p>La autoridad <b>puede</b> concederla, a solicitud presentada <b>dentro</b> del plazo
+          original, por <b>hasta</b> cinco días hábiles.</p>
+        <span class="f">8, 2º pfo. R</span>
+      </div>
+      <div class="paso fin">
+        <div class="dias">≤10<small>días hábiles</small></div>
+        <h4>Sanción directa</h4>
+        <p>Si no se atiende, o se atiende de forma incompleta, el SAT impone la sanción
+          <b>sin procedimiento sancionador de la LFPA</b>.</p>
+        <span class="f">8, 3er pfo. R</span>
+      </div>
+    </div>
+  </div>
+
+  <h3>Ruta B · Sí se atiende, y el SAT revisa</h3>
+  <div class="track">
+    <div class="track-in">
+      <div class="paso">
+        <div class="dias">≤10<small>días hábiles</small></div>
+        <h4>Oficio de hechos u omisiones</h4>
+        <p>El SAT hace constar <b>en forma circunstanciada</b> lo que advirtió.</p>
+        <span class="f">9, 1er pfo. R</span>
+      </div>
+      <div class="paso">
+        <div class="dias">5<small>días hábiles</small></div>
+        <h4>Plazo probatorio</h4>
+        <p>Para presentar lo que desvirtúe las observaciones. <b>Si no se presenta nada, los
+          hechos se tienen por consentidos.</b></p>
+        <span class="f">9, 1er y 2º pfos. R</span>
+      </div>
+      <div class="paso fin">
+        <div class="dias">≤20<small>días hábiles</small></div>
+        <h4>Resolución</h4>
+        <p>Se impone la sanción, <b>sin sujetarse a la LFPA</b>. Si se desvirtuó, se declara
+          concluida la revisión en el mismo plazo.</p>
+        <span class="f">9, 2º y 3er pfo. R</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="nota alerta">
+    <span class="k">Las dos consecuencias prácticas</span>
+    <p><b>Primera: el silencio cuesta.</b> Cinco días hábiles sin contestar el oficio de hechos u
+      omisiones no son una demora — el Reglamento dispone que los hechos <b>se tengan por
+      consentidos</b>. Es un consentimiento presunto por disposición legal, y la defensa posterior
+      arranca con los hechos ya fijados en contra.</p>
+    <p><b>Segunda: el reloj es corto.</b> Sumados los máximos de la ruta B —diez días para
+      responder, diez para el oficio de hechos u omisiones, cinco probatorios y veinte para
+      resolver— son <b>cuarenta y cinco días hábiles</b>, o <b>cincuenta</b> si hubo prórroga. Dos
+      precisiones honestas: de esos días, quince son plazos del propio sujeto obligado y no del
+      SAT; y dos de los plazos del Reglamento no tienen fecha de arranque expresa, de modo que el
+      total es una construcción, no una figura legal. Por la ruta A, la sanción puede llegar en
+      veinte o veinticinco días hábiles. Quien empieza a buscar sus papeles cuando llega el oficio
+      ya perdió.</p>
+  </div>
+</section>
+
+<!-- ══════════════ 04 ══════════════ -->
+<section id="s4">
+  <p class="eyebrow"><span class="sec-n">04</span> &nbsp;Formalidades</p>
+  <h2>El día de la visita</h2>
+  <p class="dek">Aquí sí manda la LFPA, y sus formalidades son la primera línea de defensa. Nueve
+    datos del acta, y un plazo de cinco días que casi nadie usa.</p>
+
+  <div class="prose">
+    <p>Que la LFPA sea supletoria no significa que desaparezca. En el desarrollo material de la
+      visita es exactamente donde opera, porque ni la Ley ni el Reglamento regulan cómo se levanta
+      un acta <span class="f">(35 L · 62 a 68 LFPA)</span>. Y toda formalidad omitida es un
+      argumento de nulidad.</p>
+  </div>
+
+  <h3>Qué se revisa antes de dejar entrar a nadie</h3>
+  <div class="tw">
+    <table>
+      <caption>Formalidades de la visita de verificación conforme a la LFPA (última reforma DOF 14-nov-2025)</caption>
+      <thead><tr><th style="width:26%">Qué exigir</th><th>Contenido</th><th style="width:12%" class="n">Fund.</th></tr></thead>
+      <tbody>
+        <tr><td><b>Tipo de visita</b></td>
+          <td>Ordinaria —en días y horas hábiles— o extraordinaria —en cualquier tiempo—.
+            La LFPA distingue ambas; conviene identificar cuál se está practicando</td>
+            <td class="n f">62</td></tr>
+        <tr><td><b>Orden escrita</b></td>
+          <td>Con <b>firma autógrafa</b> de autoridad competente, y en ella el lugar o zona a
+            verificar, el <b>objeto</b> de la visita, <b>el alcance que deba tener</b> y las
+            disposiciones legales que la fundamentan</td><td class="n f">63</td></tr>
+        <tr><td><b>Credencial vigente</b></td>
+          <td>Con fotografía, expedida por la autoridad competente. Debe dejarse
+            <b>copia de la orden</b> a quien atiende la diligencia</td><td class="n f">65</td></tr>
+        <tr><td><b>Dos testigos</b></td>
+          <td>Propuestos por quien atiende la diligencia. Si se niega a proponerlos, los designa
+            el verificador</td><td class="n f">66</td></tr>
+        <tr><td><b>Acta circunstanciada</b></td>
+          <td>Nueve datos obligatorios: nombre del visitado; hora, día, mes y año de inicio y
+            conclusión; domicilio completo; número y fecha del oficio de comisión; nombre y cargo
+            de quien atendió; nombre y domicilio de los testigos; datos de la actuación;
+            <b>declaración del visitado si quisiera hacerla</b>; y nombre y firma de quienes
+            intervinieron</td><td class="n f">66 y 67</td></tr>
+        <tr><td><b>Deber de facilitar</b></td>
+          <td>Permitir el acceso y dar facilidades e informes. Es obligación de la LFPA y también
+            de la fracción V del artículo 18 de la Ley: negarse es, por sí mismo, infracción
+            sancionable</td><td class="n f">64 LFPA · 18-V L</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="nota alerta">
+    <span class="k">Los cinco días del artículo 68 · el plazo más desaprovechado del sistema</span>
+    <p>«Los visitados a quienes se haya levantado acta de verificación podrán formular
+      observaciones en el acto de la diligencia y ofrecer pruebas en relación a los hechos
+      contenidos en ella, o bien, <b>por escrito, hacer uso de tal derecho dentro del término de
+      cinco días</b> siguientes a la fecha en que se hubiere levantado.»
+      <span class="src">Artículo 68 de la Ley Federal de Procedimiento Administrativo</span></p>
+    <p>Ese término de cinco días es el que el Reglamento adoptó, con nombre y apellido, como
+      <b>«plazo inicial del procedimiento de verificación»</b> para efectos del artículo 55 de la
+      Ley <span class="f">(55 Bis, antepenúltimo pfo. R)</span>. Es decir: <b>es la ventana concreta
+      para presentar el escrito de reconocimiento expreso</b> y conservar el beneficio de la
+      abstención. Cinco días después del acta, esa puerta se cierra.</p>
+  </div>
+
+  <div class="nota">
+    <span class="k">Dos reglas que conviene tener presentes</span>
+    <p><b>Cada infracción se cuantifica por separado.</b> «Cuando en una misma acta se hagan
+      constar diversas infracciones, en la resolución respectiva, <b>las multas se determinarán
+      separadamente</b> así como el monto total de todas ellas» <span class="f">(77 LFPA)</span>.
+      Es el fundamento supletorio de por qué doce meses de descuido son doce multas y no una.</p>
+    <p><b>Lo administrativo y lo penal corren en paralelo.</b> «Las sanciones por infracciones
+      administrativas se impondrán <b>sin perjuicio de las penas</b> que correspondan a los delitos
+      en que, en su caso, incurran los infractores» <span class="f">(78 LFPA)</span>.</p>
+  </div>
+</section>
+
+<!-- ══════════════ 05 ══════════════ -->
+<section id="s5">
+  <p class="eyebrow"><span class="sec-n">05</span> &nbsp;Facultades</p>
+  <h2>Seis facultades que hoy conviene tener a la vista</h2>
+  <p class="dek">Cuatro se adicionaron en marzo de 2026. Las otras dos ya estaban en la Ley desde
+    2013, y el Reglamento reformado se las atribuyó expresamente al SAT.</p>
+
+  <div class="fichas">
+    <div class="ficha">
+      <div class="cuerpo">
+        <h4>1 · Motivar con sus propias bases, sin revelarlas</h4>
+        <p>El SAT <strong>no está obligado a demostrar qué bases de datos consultó</strong> ni a
+          dar a conocer el resultado de la consulta, <strong>siempre que se trate de información
+          generada o aportada por el propio sujeto obligado</strong>. Si la información viene de
+          otra autoridad, sí debe dársela a conocer y conceder <strong>diez días hábiles</strong>
+          para manifestar lo que a su derecho convenga.</p>
+      </div>
+      <div class="monto"><span class="f">10 Bis, pfos. 2º y 3º R</span></div>
+    </div>
+
+    <div class="ficha">
+      <div class="cuerpo">
+        <h4>2 · Presunción de certeza del CFDI</h4>
+        <p>«El SAT <strong>presumirá como cierta</strong> la información contenida en los
+          comprobantes fiscales digitales por internet y en las bases de datos que lleven o tengan
+          en su poder o a las que tengan acceso.» La carga de desvirtuar es del particular.</p>
+      </div>
+      <div class="monto"><span class="f">10 Bis, último pfo. R</span></div>
+    </div>
+
+    <div class="ficha">
+      <div class="cuerpo">
+        <h4>3 · La visita en el domicilio del RFC</h4>
+        <p>Si el visitado o requerido <strong>no es localizado</strong> en el domicilio que dio en
+          su alta y registro, el SAT puede practicar la visita o el requerimiento, fundado y
+          motivado, <strong>en el domicilio registrado en el Registro Federal de Contribuyentes</strong>.
+          Un padrón desactualizado deja de ser un descuido administrativo: no impide la
+          verificación, sólo garantiza que llegue por donde no se la está esperando.</p>
+      </div>
+      <div class="monto"><span class="f">4, fr. III, 2º pfo. R</span></div>
+    </div>
+
+    <div class="ficha">
+      <div class="cuerpo">
+        <h4>4 · Notificación electrónica</h4>
+        <p>El SAT puede notificar requerimientos y solicitudes de información <strong>por vía
+          electrónica</strong>, en términos de la fracción II del artículo 35 de la LFPA y conforme
+          a las reglas de carácter general. Las nuevas Reglas obligan a consultar el buzón
+          <strong>al menos una vez cada día hábil</strong> desde su vigencia general, el 30 de
+          noviembre de 2026, con notificación que se tiene por realizada al cuarto día hábil.
+          Conviene saber que el <strong>Transitorio Décimo Primero</strong> da a la Secretaría hasta
+          ocho meses más —hasta el 30 de julio de 2027— para implementar los mecanismos tecnológicos
+          del sistema, de modo que la operación efectiva puede no ser simultánea a la exigibilidad
+          formal.</p>
+        <p style="margin-top:10px">Un dato que conviene saber, no descubrir: la fracción II del
+          artículo 35 de la LFPA admite los medios electrónicos <strong>«cuando así lo haya aceptado
+          expresamente el promovente»</strong>. Esa aceptación <strong>ya se otorgó</strong> — el
+          artículo 6 de las Reglas dispone que al firmar el trámite de alta y registro con la Firma
+          Electrónica Avanzada se acepta expresamente que la UIF o el SAT notifiquen por esa vía.
+          No hay aquí una defensa que oponer: hay un buzón que revisar.</p>
+      </div>
+      <div class="monto"><span class="f">4, fr. X R · 5, 5 Bis y 6 RCG</span></div>
+    </div>
+
+    <div class="ficha">
+      <div class="cuerpo">
+        <h4>5 · Comparecencia de cualquier persona <span class="tag">ya existía</span></h4>
+        <p>El SAT puede requerir documentación y la <strong>comparecencia de cualquier persona</strong>
+          que pueda contribuir a la verificación, y requerir a presuntos infractores para que
+          manifiesten lo que a su derecho convenga. No se limita al sujeto obligado: alcanza a
+          empleados, proveedores y contrapartes.</p>
+        <p style="margin-top:10px">Con un contrapeso expreso que conviene conocer: el
+          <strong>artículo 41 Bis de la Ley</strong> permite que las diligencias que requieran la
+          comparecencia de la persona Representante Encargada del Cumplimiento sean desahogadas por
+          representantes legales o apoderados, precisamente para proteger su identidad.</p>
+      </div>
+      <div class="monto"><span class="f">56 R · 6, fr. V L</span></div>
+    </div>
+
+    <div class="ficha">
+      <div class="cuerpo">
+        <h4>6 · Auxilio de la fuerza pública <span class="tag">ya existía</span></h4>
+        <p>El SAT puede solicitar el auxilio de la <strong>fuerza pública federal o local</strong>
+          cuando las circunstancias lo requieran. La Ley añade que los mandos <strong>deberán</strong>
+          proporcionar el auxilio solicitado.</p>
+      </div>
+      <div class="monto"><span class="f">4, fr. IX R · 37 L</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 06 ══════════════ -->
+<section id="s6">
+  <p class="eyebrow"><span class="sec-n">06</span> &nbsp;Catálogo</p>
+  <h2>Las siete conductas del artículo 53</h2>
+  <p class="dek">Todo el sistema de multas cuelga de siete fracciones. El artículo 55 del
+    Reglamento faculta al SAT a sancionar a quienes infrinjan la Ley, el Reglamento <b>y las
+    Reglas</b>, pero «en los términos del Capítulo VII de la Ley»: incumplir el Reglamento o las
+    Reglas no crea un supuesto de multa nuevo, entra por alguna de estas siete fracciones, casi
+    siempre por la II.</p>
+
+  <div class="tw">
+    <table>
+      <caption>Artículo 53 de la Ley · catálogo cerrado de infracciones y su escalón de multa</caption>
+      <thead><tr><th style="width:8%">Fr.</th><th style="width:44%">Conducta</th><th>Qué comprende en la práctica</th><th style="width:13%" class="n">Escalón</th></tr></thead>
+      <tbody>
+        <tr><td class="n"><b>I</b></td><td>Abstenerse de cumplir los requerimientos que formule la Secretaría</td>
+          <td>No contestar en los diez días hábiles, o contestar de forma incompleta <span class="f">(8 R)</span></td>
+          <td class="n"><span class="tag n1">Bajo</span></td></tr>
+        <tr><td class="n"><b>II</b></td><td>Incumplir <b>cualquiera</b> de las obligaciones del artículo 18</td>
+          <td>Identificación del cliente · actividad u ocupación en relaciones de negocio ·
+            beneficiario controlador · conservación diez años en el domicilio registrado —salvo la fracción XIV del artículo 17, exceptuada de esa regla— ·
+            alta, actualización y baja del padrón (IV Bis) · dar facilidades para la visita ·
+            presentar Avisos e Informes, incluido el informe sin operaciones que exigen las Reglas por remisión de la fracción VI</td>
+          <td class="n"><span class="tag n1">Bajo</span></td></tr>
+        <tr><td class="n"><b>III</b></td><td>Presentar los Avisos <b>fuera de tiempo</b></td>
+          <td>Aplica cuando la presentación ocurre <b>a más tardar dentro de los treinta días
+            siguientes</b> a la fecha en que debió presentarse. Pasado ese plazo, cambia de régimen</td>
+          <td class="n"><span class="tag n1">Bajo</span></td></tr>
+        <tr><td class="n"><b>IV</b></td><td>Presentar Avisos sin reunir los requisitos del artículo 24</td>
+          <td>Datos generales del sujeto obligado; del cliente y, <b>en su caso</b>, del
+            beneficiario controlador, con su actividad u ocupación; y <b>descripción general de la
+            Actividad Vulnerable</b> sobre la que se da Aviso. Es calidad del Aviso, no su
+            existencia</td>
+          <td class="n"><span class="tag n1">Bajo</span></td></tr>
+        <tr><td class="n"><b>V</b></td><td>Incumplir los artículos 33, 33 Bis y 33 Ter</td>
+          <td>Fedatarios: no identificar la forma de pago (33). <b>Todas las sociedades
+            mercantiles</b>, sean o no Actividad Vulnerable: no atender el requerimiento sobre
+            beneficiario controlador ni conservar el soporte, y no presentar el aviso de inscripción
+            en el libro de registro cuando hay transmisión de partes sociales o acciones (33 Bis,
+            pfos. 1º y 2º). El registro del 33 Ter en el sistema de la Secretaría de Economía queda
+            <b>condicionado</b> a que existan ese sistema y los lineamientos de la Secretaría</td>
+          <td class="n"><span class="tag n2">Medio</span></td></tr>
+        <tr><td class="n"><b>VI</b></td><td><b>Omitir</b> presentar los Avisos</td>
+          <td>El hallazgo más caro y el más fácil de acreditar: se prueba cruzando facturación
+            contra Avisos presentados</td>
+          <td class="n"><span class="tag n3">Alto</span></td></tr>
+        <tr><td class="n"><b>VII</b></td><td>Participar en los actos u operaciones <b>prohibidos por el artículo 32</b></td>
+          <td>Uso de efectivo o metales por encima de los umbrales. La prueba queda en la propia
+            escritura, factura o contrato</td>
+          <td class="n"><span class="tag n3">Alto</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="nota">
+    <span class="k">Lo que no está en el catálogo</span>
+    <p>El artículo 53 <b>no menciona el artículo 20</b>. No designar persona Representante
+      Encargada del Cumplimiento, o no mantener vigente la designación, <b>no tiene multa
+      directa</b>. Su consecuencia es otra, y más seria: mientras no haya Representante o la
+      designación no sea aceptada, el cumplimiento de todas las obligaciones corresponde
+      <b>a los integrantes del órgano de administración o a quien funja como administrador
+      único</b>, a la parte fideicomitente o a quien administre la figura jurídica
+      <span class="f">(20, 2º pfo. L)</span>. La ausencia de Representante no diluye la
+      responsabilidad: la concentra en personas físicas con nombre y RFC.</p>
+  </div>
+</section>
+
+<!-- ══════════════ 07 ══════════════ -->
+<section id="s7">
+  <p class="eyebrow"><span class="sec-n">07</span> &nbsp;Montos</p>
+  <h2>Los tres escalones del artículo 54</h2>
+  <p class="dek">Del primer escalón al tercero, el piso se multiplica por cincuenta y el techo por
+    treinta y dos y media. Y el tercero ni siquiera tiene techo fijo.</p>
+
+  <div class="tw">
+    <table>
+      <caption>Artículo 54 de la Ley · convertido con la UMA diaria de $117.31 vigente desde el 1 de febrero de 2026</caption>
+      <thead><tr><th style="width:14%">Escalón</th><th style="width:22%">Supuestos del art. 53</th><th class="n" style="width:20%">En UMA</th><th class="n">En pesos</th></tr></thead>
+      <tbody>
+        <tr><td><span class="tag n1">Bajo</span><br><span class="f">54, fr. I</span></td>
+          <td>I, II, III y IV</td>
+          <td class="n">200 a 2,000</td>
+          <td class="n">$23,462.00 a $234,620.00</td></tr>
+        <tr><td><span class="tag n2">Medio</span><br><span class="f">54, fr. II</span></td>
+          <td>V</td>
+          <td class="n">2,000 a 10,000</td>
+          <td class="n">$234,620.00 a $1,173,100.00</td></tr>
+        <tr><td><span class="tag n3">Alto</span><br><span class="f">54, fr. III</span></td>
+          <td>VI y VII</td>
+          <td class="n">10,000 a 65,000<br><span style="color:var(--ink-3)">o 10 % a 100 % del valor<br>del acto u operación</span></td>
+          <td class="n">$1,173,100.00 a $7,625,150.00<br><span style="color:var(--ink-3)">la que resulte <b>mayor</b></span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="nota alerta">
+    <span class="k">El brinco de los treinta días</span>
+    <p>El segundo párrafo de la fracción III del artículo 53 dispone que, cuando la
+      extemporaneidad exceda los treinta días, «se aplicará la sanción prevista para el caso de
+      omisión en el <b>artículo 54, fracción II</b>». La remisión es defectuosa: la sanción de la
+      omisión de Avisos (art. 53, fr. VI) está en la <b>fracción III</b> del artículo 54, no en la
+      II. De ahí dos lecturas posibles:</p>
+    <p><b>Lectura literal</b> —favorable al sujeto obligado—: se aplica el escalón medio,
+      2,000 a 10,000 UMA ($234,620 a $1,173,100).<br>
+      <b>Lectura teleológica</b> —la que se debe prever—: si la norma dice «la sanción prevista
+      para el caso de omisión», es el escalón alto, 10,000 a 65,000 UMA o el porcentaje del valor.</p>
+    <p>La conclusión operativa es la misma en ambas: <b>un Aviso presentado con treinta y un días
+      de retraso cuesta, en el piso, al menos diez veces más que uno presentado con veintinueve.</b>
+      La ventana de treinta días no es un margen de tolerancia: es un acantilado.</p>
+  </div>
+
+  <h3>Cómo se gradúa la multa dentro del rango</h3>
+  <div class="prose">
+    <p>La autoridad no elige libremente el monto. El artículo 60 la obliga a tomar en cuenta,
+      en su caso, tres elementos: <b>la reincidencia</b>, sus causas y las acciones correctivas
+      aplicadas por el presunto infractor; <b>la cuantía del acto u operación</b>, procurando la
+      proporcionalidad del monto de la sanción con aquellos; y <b>la intención</b> de realizar la
+      conducta <span class="f">(60 L)</span>.</p>
+    <p>De los tres, el único que el sujeto obligado puede construir <em>antes</em> es el primero.
+      «Las acciones correctivas aplicadas por el presunto infractor» es la puerta por la que entra
+      un expediente de autocorrección fechado — y es la razón por la que la evidencia de la
+      corrección vale tanto como la corrección misma.</p>
+    <p>Es reincidente quien, habiendo sido sancionado por una infracción, comete <b>la misma</b>
+      dentro de los <b>dos años inmediatos siguientes</b> a que la resolución quedó firme
+      <span class="f">(60, fr. I L)</span>. Y hay una consecuencia cuantitativa que suele pasarse
+      por alto: por la vía supletoria, <b>en caso de reincidencia se duplica la multa impuesta por
+      la infracción anterior</b>, sin que el monto exceda del doble del máximo
+      <span class="f">(71 LFPA)</span>. La autoridad debe además fundar y motivar considerando los
+      daños producidos o posibles, el carácter intencional o no de la conducta, la gravedad y la
+      reincidencia <span class="f">(73 LFPA)</span> — esos cuatro criterios son la base para
+      combatir la cuantificación aunque la infracción esté acreditada.</p>
+    <p>Y una precisión sobre la naturaleza del cobro: <b>las multas tienen el carácter de créditos
+      fiscales</b>, se fijan en cantidad líquida y se sujetan al procedimiento administrativo de
+      ejecución <span class="f">(52, 3er pfo. L)</span>. Es decir: se embargan como cualquier
+      adeudo fiscal.</p>
+  </div>
+</section>
+
+<!-- ══════════════ 08 ══════════════ -->
+<section id="s8">
+  <p class="eyebrow"><span class="sec-n">08</span> &nbsp;Herramienta</p>
+  <h2>Calculadora de exposición</h2>
+  <p class="dek">Selecciona los incumplimientos, indica cuántas veces ocurrieron y revisa el rango
+    de multa. Es un ejercicio de orden de magnitud, no un cálculo de la autoridad.</p>
+
+  <div class="tool">
+    <h3 style="margin-top:0">Incumplimientos</h3>
+    <div id="lista"></div>
+
+    <div class="grid2" style="margin-top:22px">
+      <label class="campo"><span>Valor de la operación individual de mayor cuantía (MXN)</span>
+        <input type="number" id="valorOp" min="0" step="1000" placeholder="0 · sólo aplica al escalón alto">
+      </label>
+      <label class="campo"><span>Beneficio del artículo 55</span>
+        <select id="benef">
+          <option value="0">Sin beneficio</option>
+          <option value="1">Abstención por única ocasión (art. 55, 1er pfo.)</option>
+          <option value="2">Reducción de hasta 50 % (art. 55, 2º pfo.)</option>
+        </select>
+      </label>
+    </div>
+
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <button type="button" id="calc">Calcular</button>
+      <button type="button" class="ghost" id="reset">Limpiar</button>
+    </div>
+
+    <div class="res" id="res" aria-live="polite">
+      <div class="rango" id="rango">Selecciona al menos un incumplimiento</div>
+      <div class="sub" id="sub">Los montos se calculan con la UMA diaria de $117.31</div>
+      <ul id="detalle"></ul>
+    </div>
+  </div>
+
+  <div class="nota">
+    <span class="k">Advertencias de uso</span>
+    <p>La multa se determina <b>por infracción</b>, no por periodo: doce informes sin operaciones
+      no presentados son doce infracciones del artículo 53, fracción II, no una.</p>
+    <p>En el escalón alto la multa es <b>la que resulte mayor</b> entre el rango en UMA y el
+      porcentaje del valor del acto u operación, cuando sean cuantificables en dinero. Esa
+      comparación se hace <b>operación por operación</b>: si hay varias operaciones del escalón alto
+      con valores distintos, calcúlalas por separado y suma. Esta herramienta la aplica sobre un
+      solo valor.</p>
+    <p>El resultado <b>no es una predicción</b>. La autoridad gradúa conforme al artículo 60 y
+      puede colocarse en cualquier punto del rango.</p>
+  </div>
+</section>
+
+<!-- ══════════════ 09 ══════════════ -->
+<section id="s9">
+  <p class="eyebrow"><span class="sec-n">09</span> &nbsp;Consecuencias accesorias</p>
+  <h2>Cuando la multa no es lo peor que pasa</h2>
+  <p class="dek">Para cinco grupos, la sanción económica es la parte recuperable del problema.</p>
+
+  <div class="tw">
+    <table>
+      <caption>Consecuencias adicionales a la multa · artículos 54 Bis y 56 a 59 de la Ley</caption>
+      <thead><tr><th style="width:22%">A quién</th><th style="width:26%">Qué ocurre</th><th>Qué lo detona</th><th style="width:11%" class="n">Fund.</th></tr></thead>
+      <tbody>
+        <tr><td>Cualquier sujeto obligado</td>
+          <td><b>Suspensión temporal</b> de actos u operaciones con determinados clientes o usuarios</td>
+          <td>Lo determina la Secretaría conforme a los mecanismos que se emitan en las reglas de
+            carácter general, en tanto se subsane o se resuelva. <b>Está condicionada a que esos
+            mecanismos existan</b></td>
+          <td class="n f">54 Bis</td></tr>
+        <tr><td>Juegos y sorteos (fr. I) · blindaje (fr. IX) · traslado y custodia de valores (fr. X)</td>
+          <td><b>Revocación</b> de permisos o autorizaciones</td>
+          <td><b>Reincidencia</b> en las fracciones I, II, III o IV del art. 53, <b>o</b> cualquiera
+            de las conductas de las fracciones VI y VII</td>
+          <td class="n f">56</td></tr>
+        <tr><td>Corredor público</td>
+          <td><b>Cancelación definitiva</b> de la habilitación</td>
+          <td>Reincidencia en las fracciones I, II, III o IV. Firme la sanción, la Secretaría de
+            Economía tiene diez días hábiles para cancelar</td>
+          <td class="n f">57</td></tr>
+        <tr><td>Notario y corredor público</td>
+          <td><b>Notorias deficiencias</b> informadas a la autoridad que supervisa la fe pública,
+            para que instaure su propio procedimiento sancionador</td>
+          <td>Reincidencia en las fracciones I, II, III, IV <b>y V</b>, o violación de las
+            fracciones VI y VII. Su aplicación depende de que el Congreso local haya hecho las
+            reformas que le ordenó el Transitorio Quinto del decreto, dentro de los 180 días
+            naturales siguientes al 17 de julio de 2025</td>
+          <td class="n f">58</td></tr>
+        <tr><td>Agentes, apoderados y agencias aduanales</td>
+          <td><b>Cancelación</b> de la autorización otorgada por la Secretaría (59 L). El
+            Reglamento la vincula con la patente del art. 159 y las autorizaciones de los
+            arts. 159-Bis y 167-D de la Ley Aduanera (58 R)</td>
+          <td>Reincidencia en las fracciones I, II, III o IV, o violación de las fracciones VI y VII</td>
+          <td class="n f">59 L · 58 R</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="nota">
+    <span class="k">Dónde está el filo</span>
+    <p>En cuatro de los cinco casos el detonante <b>incluye la reincidencia en las conductas del
+      escalón bajo</b> —requerimientos no atendidos, obligaciones del artículo 18, Avisos
+      extemporáneos y Avisos sin requisitos—, a las que el artículo 58 añade, para notarios y
+      corredores, la fracción V del escalón medio. Y en tres de esos casos las fracciones VI y VII
+      lo detonan por sí solas, sin necesidad de reincidir. Es decir, exactamente las infracciones
+      que un inspector prueba desde el escritorio y que un sujeto obligado tiende a considerar
+      menores. Para un corredor público, dos multas de $23,462 pueden costarle la habilitación.</p>
+  </div>
+</section>
+
+<!-- ══════════════ 10 ══════════════ -->
+<section id="s10">
+  <p class="eyebrow"><span class="sec-n">10</span> &nbsp;Salida</p>
+  <h2>El artículo 55: la pieza más valiosa y la peor aprovechada</h2>
+  <p class="dek">Todo depende de una sola palabra, y esa palabra es «previa».</p>
+
+  <div class="prose">
+    <p>El artículo 55 ofrece dos beneficios distintos, con requisitos distintos y en momentos
+      procesales distintos. Confundirlos es la forma más común de perderlos.</p>
+  </div>
+
+  <div class="tw">
+    <table>
+      <caption>Los dos beneficios del artículo 55 de la Ley, reformado el 16 de julio de 2025</caption>
+      <thead><tr><th style="width:22%">Beneficio</th><th>Requisitos, todos acumulativos</th><th style="width:24%">Cuándo se reconoce la falta</th></tr></thead>
+      <tbody>
+        <tr><td><b>Abstención de sancionar</b><br><span class="f">55, 1er pfo.</span><br>
+            <span style="color:var(--ink-3);font-size:13px">Por <b>única ocasión</b>, el total de las infracciones</span></td>
+          <td>1 · Cumplir con las obligaciones respectivas<br>
+              2 · Hacerlo <b>de manera espontánea</b><br>
+              3 · Hacerlo <b>previa</b>mente al inicio de las facultades de verificación<br>
+              4 · <b>Reconocer expresamente</b> la falta</td>
+          <td>Dentro del plazo inicial del <b>procedimiento de verificación</b>, que el Reglamento
+            define como el término de cinco días del artículo 68 de la LFPA</td></tr>
+        <tr><td><b>Reducción de hasta 50 %</b><br><span class="f">55, 2º pfo.</span><br>
+            <span style="color:var(--ink-3);font-size:13px">Cuando ya se ejerció el primer beneficio</span></td>
+          <td>1 · Regularizar de manera espontánea<br>
+              2 · Previamente al inicio de las facultades de verificación<br>
+              3 · Reconocer expresamente la falta</td>
+          <td>Dentro del plazo inicial del <b>procedimiento sancionador</b>, que el Reglamento
+            define como el periodo del artículo 72 de la LFPA</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="nota alerta">
+    <span class="k">Los dos plazos, con nombre y número</span>
+    <p>El artículo 55 de la Ley habla de «plazo inicial» sin decir cuál. El artículo 55 Bis del
+      Reglamento lo define por remisión a la LFPA, y al hacerlo convierte dos expresiones vagas en
+      dos relojes concretos.</p>
+    <p><b>Cinco días</b> desde que se levantó el acta de verificación, para el beneficio de
+      <b>abstención</b>. Es el término del artículo 68 de la LFPA para formular observaciones y
+      ofrecer pruebas por escrito.</p>
+    <p><b>Quince días</b> desde la notificación del inicio del procedimiento, para el beneficio de
+      <b>reducción</b>. Es el plazo del artículo 72 de la LFPA: «Para imponer una sanción, la
+      autoridad administrativa deberá notificar previamente al infractor del inicio del
+      procedimiento, para que este dentro de los quince días siguientes exponga lo que a su derecho
+      convenga y, en su caso aporte las pruebas con que cuente.»</p>
+    <p>Cinco y quince, y <b>ambos en días hábiles</b>: el artículo 28 de la LFPA excluye del
+      cómputo los días inhábiles. Son los dos números que conviene tener escritos en la pared.</p>
+    <p><b>Una advertencia sobre el cinco.</b> El artículo 68 de la LFPA sólo opera cuando
+      <b>se levantó acta de verificación</b>. Si las facultades arrancan por la vía del
+      requerimiento del artículo 8 del Reglamento —que es la más frecuente— no hay acta, y la
+      definición del artículo 55 Bis se queda sin referente.</p>
+    <p><b>Y una advertencia mayor sobre el quince.</b> El artículo 72 presupone que se notifique
+      <b>el inicio de un procedimiento sancionador</b>. Si el SAT actúa por las rutas de los
+      artículos 8 y 9 del Reglamento —que ordenan resolver «sin implementar el procedimiento
+      sancionador a que se refiere la Ley Federal de Procedimiento Administrativo»— esa
+      notificación no existe y los quince días <b>no llegan a abrirse</b>: el único plazo que de
+      hecho corre es el de cinco días hábiles del oficio de hechos u omisiones. El quince es la
+      ventana que hay que <b>exigir</b> cuando la autoridad pretende sancionar sin sustanciar.
+      Razón de más para corregir antes y no después.</p>
+  </div>
+
+  <h3>Cómo se reconoce la falta · artículo 55 Bis del Reglamento</h3>
+  <div class="prose">
+    <p>Hasta marzo de 2026 la Ley exigía «reconocer expresamente» sin decir cómo. El artículo
+      55 Bis, adicionado por la reforma al Reglamento, fija cuatro requisitos para el escrito
+      <span class="f">(55 Bis R)</span>:</p>
+  </div>
+  <div class="fichas">
+    <div class="ficha"><div class="cuerpo"><h4>1 · Escrito libre ante el SAT</h4>
+      <p>Firmado por quien realiza la Actividad Vulnerable o por su representante legal,
+        <strong>adjuntando la documentación que acredite esa personalidad</strong>.</p></div>
+      <div class="monto"><span class="f">55 Bis R · primer requisito</span></div></div>
+    <div class="ficha"><div class="cuerpo"><h4>2 · La totalidad de las faltas, con detalle</h4>
+      <p>Debe especificar de forma clara y precisa <strong>todas</strong> las faltas en que se
+        incurrió, detallando la operación y el periodo en que se debió haber cumplido. No admite
+        listas parciales.</p></div>
+      <div class="monto"><span class="f">55 Bis R · segundo requisito</span></div></div>
+    <div class="ficha"><div class="cuerpo"><h4>3 · Manifestación bajo protesta de decir verdad</h4>
+      <p>De que <strong>la totalidad</strong> de las faltas detalladas <strong>ya fueron corregidas
+        o subsanadas</strong>. Se corrige primero y se reconoce después: el escrito documenta un
+        hecho consumado, no una promesa.</p></div>
+      <div class="monto"><span class="f">55 Bis R · tercer requisito</span></div></div>
+    <div class="ficha"><div class="cuerpo"><h4>4 · La documentación que lo acredite</h4>
+      <p>Anexar lo que demuestre el cumplimiento de la totalidad de las obligaciones objeto de
+        infracción. <strong>La fecha de esa documentación es la prueba de la espontaneidad</strong>,
+        y es lo único que sostiene el beneficio.</p></div>
+      <div class="monto"><span class="f">55 Bis R · cuarto requisito</span></div></div>
+  </div>
+
+  <div class="nota alerta">
+    <span class="k">Dos advertencias honestas</span>
+    <p><b>La ventana se cierra sola.</b> El beneficio exige que el cumplimiento sea previo al
+      inicio de las facultades de verificación. En el instante en que se notifica una orden de
+      visita o un requerimiento sobre la misma obligación y el mismo periodo, deja de haber
+      espontaneidad. No hay negociación después.</p>
+    <p><b>La cadena normativa está incompleta.</b> El último párrafo del artículo 55 Bis dispone
+      que, para obtener los beneficios, se deberá cumplir con lo previsto en las reglas de
+      carácter general — y las reglas publicadas el 7 de agosto de 2026 <b>no desarrollan la
+      materia</b>. La supletoriedad rellena parte del hueco: por el artículo 17 de la LFPA la
+      autoridad no puede exceder de <b>tres meses</b> para resolver y, vencido el plazo, opera la
+      <b>negativa ficta</b> —no la afirmativa—, de la que puede pedirse constancia dentro de dos
+      días hábiles y que es impugnable. Lo que sigue sin norma es el criterio para desagregar el
+      «hasta 50 %». El beneficio existe; su procedimiento, sólo en parte. Conviene documentarlo
+      todo y no dar el resultado por descontado.</p>
+  </div>
+</section>
+
+<!-- ══════════════ 11 ══════════════ -->
+<section id="s11">
+  <p class="eyebrow"><span class="sec-n">11</span> &nbsp;Defensa</p>
+  <h2>Qué se puede hacer cuando ya llegó la multa</h2>
+  <p class="dek">Cuatro peldaños, y la elección del primero condiciona todo lo demás.</p>
+
+  <div class="fichas">
+    <div class="ficha"><div class="cuerpo">
+      <h4>Peldaño 1 · Recurso de revisión ante el propio SAT</h4>
+      <p>Las sanciones pueden impugnarse ante la propia Secretaría mediante el recurso de revisión
+        previsto en la LFPA. El Reglamento precisa quién resuelve: tiene el carácter de superior
+        jerárquico <strong>la unidad administrativa que así determine el Reglamento Interior del
+        SAT</strong>. Es optativo. <strong>Plazo: quince días hábiles</strong> desde el día
+        siguiente a aquél en que surtió efectos la notificación <span class="f">(85 LFPA)</span>.</p>
+      <p style="margin-top:8px"><strong>Y suspende el cobro</strong>, que es lo que casi nadie
+        aprovecha: interpuesto el recurso, la ejecución se suspende si se solicita expresamente y,
+        tratándose de multas, se garantiza el crédito fiscal en alguna de las formas del Código
+        Fiscal. Si la autoridad no acuerda sobre la suspensión <strong>dentro de los cinco días
+        siguientes, se entiende otorgada</strong> <span class="f">(87 LFPA)</span>.</p>
+      <p style="margin-top:8px">Al resolver puede desecharlo o sobreseerlo, confirmar el acto,
+        declarar su inexistencia, nulidad o anulabilidad, revocarlo total o parcialmente,
+        modificarlo o <strong>expedir uno nuevo que lo sustituya</strong>
+        <span class="f">(91 LFPA)</span>; si ordena realizar un acto o reponer el procedimiento,
+        debe cumplirse en cuatro meses <span class="f">(92, último pfo. LFPA)</span>. Ganar el
+        recurso no siempre significa que la multa desaparezca: puede significar que se emita otra,
+        mejor fundada.</p></div>
+      <div class="monto"><span class="f">61 L · 59 R · 83, 85, 86, 87, 91 y 92 LFPA</span></div></div>
+
+    <div class="ficha"><div class="cuerpo">
+      <h4>Peldaño 2 · Juicio de nulidad ante el TFJA</h4>
+      <p>La Ley permite acudir <strong>directamente</strong> al Tribunal Federal de Justicia
+        Administrativa por la vía del procedimiento contencioso administrativo, sin agotar el
+        recurso. Es un órgano jurisdiccional autónomo que analiza la legalidad del acto.</p>
+      <p style="margin-top:8px"><strong>Ojo con la vía.</strong> Las resoluciones que únicamente
+        impongan multas y no excedan de <strong>treinta veces la UMA elevada al año</strong> —del
+        orden de 1.28 millones de pesos en 2026, es decir, los escalones bajo y medio completos— se
+        tramitan en <strong>vía sumaria</strong>: mismo plazo de treinta días, instrucción abreviada
+        y sentencia en un máximo de seis meses. Presentar en la vía equivocada ya no provoca
+        desechamiento: el Magistrado debe reconducir el juicio
+        <span class="f">(58-1 y 58-2, fr. II LFPCA)</span>.</p></div>
+      <div class="monto"><span class="f">61 L · 13, 58-1 y 58-2 LFPCA</span></div></div>
+
+    <div class="ficha"><div class="cuerpo">
+      <h4>Peldaño 3 · Amparo indirecto</h4>
+      <p>Ante un Juez de Distrito. Procede contra normas generales y contra actos u omisiones de
+        autoridades <strong>distintas de los tribunales judiciales, administrativos o del
+        trabajo</strong> <span class="f">(107, fr. I y II)</span>. Tratándose de un procedimiento
+        administrativo seguido en forma de juicio, procede contra la resolución definitiva y contra
+        los actos del procedimiento que sean <strong>de imposible reparación</strong> —los que
+        afecten materialmente derechos sustantivos— <span class="f">(107, fr. III)</span>.</p>
+      <p style="margin-top:8px"><strong>Es un peldaño, no un atajo:</strong> rige el principio de
+        definitividad, de modo que contra una multa administrativa hay que agotar antes el recurso
+        de revisión o el juicio de nulidad <span class="f">(61, fr. XX)</span>. Con una excepción
+        que aquí sí importa: esa misma fracción exige que el medio ordinario suspenda los efectos
+        «sin exigir mayores requisitos que los que la misma consigna para conceder la suspensión
+        definitiva», y la garantía del interés fiscal es justamente un requisito mayor.</p></div>
+      <div class="monto"><span class="f">107, 61 fr. XX y 35 LAmp</span></div></div>
+
+    <div class="ficha"><div class="cuerpo">
+      <h4>Peldaño 4 · Amparo directo</h4>
+      <p>Ante un Tribunal Colegiado de Circuito, contra la sentencia definitiva del juicio de
+        nulidad. <strong>Sólo lo promueve el particular:</strong> la autoridad pública no puede
+        invocar interés legítimo ni ser quejosa en amparo <span class="f">(5º, fr. I LAmp)</span>.
+        Si la sentencia le es adversa, el SAT dispone del <strong>recurso de revisión fiscal</strong>
+        ante el mismo Tribunal Colegiado, dentro de los quince días siguientes, y sólo si el asunto
+        excede de 27,000 veces la UMA o encuadra en los supuestos de importancia y trascendencia
+        <span class="f">(63 LFPCA)</span>.</p></div>
+      <div class="monto"><span class="f">170 y 5º LAmp · 63 LFPCA</span></div></div>
+  </div>
+
+  <div class="tw">
+    <table>
+      <caption>Los plazos de la defensa · textos vigentes al 26 de agosto de 2026</caption>
+      <thead><tr><th style="width:30%">Vía</th><th class="n" style="width:16%">Plazo</th><th>Desde cuándo corre</th></tr></thead>
+      <tbody>
+        <tr><td>Reconocimiento expreso del art. 55, para la <b>abstención</b></td>
+          <td class="n">5 días hábiles</td>
+          <td>Desde que se levantó el acta de verificación <span class="f">(68 LFPA · 55 Bis R)</span></td></tr>
+        <tr><td>Reconocimiento expreso del art. 55, para la <b>reducción</b></td>
+          <td class="n">15 días hábiles</td>
+          <td>Desde la notificación del inicio del procedimiento sancionador <span class="f">(72 LFPA · 55 Bis R)</span></td></tr>
+        <tr><td>Desvirtuar el oficio de hechos u omisiones</td>
+          <td class="n">5 días hábiles</td>
+          <td>Desde la notificación del oficio. Vencido, los hechos <b>se tienen por consentidos</b> <span class="f">(9, 1er y 2º pfos. R)</span></td></tr>
+        <tr><td><b>Recurso de revisión</b> ante el SAT</td>
+          <td class="n">15 días hábiles</td>
+          <td>Desde el día siguiente a aquél en que surtió efectos la notificación de la resolución recurrida <span class="f">(85 LFPA)</span></td></tr>
+        <tr><td><b>Juicio de nulidad</b> ante el TFJA</td>
+          <td class="n">30 días hábiles</td>
+          <td>A partir del <b>día siguiente</b> a aquél en que surtió efectos la notificación de la resolución impugnada <span class="f">(13, fr. I, inciso a) y 74, fr. I y II LFPCA)</span></td></tr>
+        <tr><td><b>Amparo</b></td>
+          <td class="n">15 días hábiles</td>
+          <td>Desde el día siguiente a aquél en que surtió efectos la notificación del acto reclamado, o en que se tuvo conocimiento de él <span class="f">(18 y 19 LAmp)</span>. Si se reclama una norma general autoaplicativa, <b>treinta días desde su entrada en vigor</b> <span class="f">(17, fr. I y 18 LAmp)</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="nota">
+    <span class="k">Dos precisiones sobre el juicio de nulidad</span>
+    <p><b>La multa es crédito fiscal, y eso condiciona la suspensión.</b> Como las multas de esta
+      Ley tienen el carácter de créditos fiscales y se sujetan al procedimiento administrativo de
+      ejecución <span class="f">(52, 3er pfo. L)</span>, la suspensión se rige por el artículo 28 de
+      la LFPCA: se concede si no se afecta el interés social ni se contravienen disposiciones de
+      orden público —y la reforma de junio de 2026 precisó que sí se contravienen cuando la
+      suspensión permita <b>consumar o continuar una infracción o un delito</b>—, pero, tratándose
+      de créditos fiscales, <b>sólo surte efectos si se constituye la garantía del interés fiscal
+      ante la autoridad ejecutora</b> <span class="f">(28, fr. II, inciso a) LFPCA)</span>. El
+      Magistrado puede reducir el monto si el crédito excede la capacidad económica del solicitante.
+      Demandar no detiene el cobro: lo detiene la garantía.</p>
+    <p><b>El juicio en línea.</b> La reforma a la LFPCA publicada el 9 de junio de 2026 dispone que
+      la parte demandante elige la vía tradicional o en línea al presentar la demanda y
+      <b>no puede variarla después</b>; si no manifiesta su opción, se entiende que eligió la vía
+      tradicional <span class="f">(13 LFPCA)</span>.</p>
+  </div>
+
+  <div class="nota">
+    <span class="k">Lo que hay que conservar para poder defenderse</span>
+    <p>La documentación soporte de la Actividad Vulnerable se conserva <b>al menos diez años</b>
+      en el <b>domicilio registrado ante la Secretaría para ese efecto</b>, contados desde la
+      realización de la actividad <span class="f">(18, fr. IV L)</span>; y la copia de los Avisos e
+      Informes, su soporte y los acuses electrónicos, por el mismo plazo, contado desde su
+      presentación y desde la emisión del acuse <span class="f">(20 R)</span>. Ese plazo se computa a partir de los actos u
+      operaciones realizados <b>desde el 17 de julio de 2025</b>
+      <span class="f">(Trans. Séptimo del decreto de reforma al Reglamento)</span>. Y hay una regla
+      que muchos desconocen: cuando se promueve recurso o juicio, <b>el plazo de conservación se
+      interrumpe</b> en la fecha de presentación y se reinicia cuando la resolución definitiva
+      quede firme. Depurar archivo durante un litigio destruye la prueba propia.</p>
+  </div>
+</section>
+
+<!-- ══════════════ 12 ══════════════ -->
+<section id="s12">
+  <p class="eyebrow"><span class="sec-n">12</span> &nbsp;Frontera penal</p>
+  <h2>Los delitos que la propia LFPIORPI castiga</h2>
+  <p class="dek">No son el artículo 400 Bis. Se cometen sin lavar un peso, con un expediente mal
+    integrado y una prisa mal administrada.</p>
+
+  <div class="prose">
+    <p>Casi todo el mercado, cuando habla de «delitos» en esta materia, habla del artículo 400 Bis
+      del Código Penal Federal — operaciones con recursos de procedencia ilícita. Ése es el delito
+      que persigue la Fiscalía y que exige acreditar el <b>conocimiento</b> de que los recursos
+      proceden o representan el producto de una actividad ilícita. <b>Pero la LFPIORPI tiene sus propios delitos, en su Capítulo VIII, y
+      son otros.</b> Conviene tener los dos planos separados y, después, ver dónde se tocan.</p>
+  </div>
+
+  <h3>El plano del Código Penal Federal</h3>
+  <div class="tw">
+    <table>
+      <caption>Código Penal Federal, texto vigente con la última reforma publicada el 13 de marzo de 2026</caption>
+      <thead><tr><th style="width:16%">Artículo</th><th>Qué establece</th><th style="width:22%" class="n">Pena</th></tr></thead>
+      <tbody>
+        <tr><td><b>400 Bis</b><br><span class="f">Operaciones con recursos<br>de procedencia ilícita</span></td>
+          <td>Adquirir, enajenar, administrar, custodiar, poseer, cambiar, convertir, depositar,
+            retirar, dar o recibir, invertir, traspasar, transportar o transferir recursos, derechos
+            o bienes <b>cuando se tenga conocimiento</b> de que proceden o representan el producto
+            de una actividad ilícita; u ocultar, encubrir <b>o pretender ocultar o encubrir</b> su
+            naturaleza, origen, ubicación, destino, movimiento, propiedad o titularidad.
+            <br><br>Con una precisión que no conviene pasar por alto: el propio artículo dispone que
+            los recursos se tienen por producto de actividad ilícita cuando <b>existan indicios
+            fundados o certeza</b> de su origen delictivo <b>y no pueda acreditarse su legítima
+            procedencia</b></td>
+          <td class="n">5 a 15 años de prisión<br>1,000 a 5,000 días multa</td></tr>
+        <tr><td><b>400 Bis</b><br><span class="f">penúltimo párrafo<br>reformado 16-jul-2025<br>último párrafo, desde 2014</span></td>
+          <td>«Para ejercer la acción penal <b>se requerirá la denuncia de la Secretaría de Hacienda
+            y Crédito Público, quien tendrá el carácter de víctima u ofendida</b>.» Y cuando en
+            ejercicio de sus facultades de fiscalización encuentre elementos que permitan presumir
+            la comisión del delito, <b>deberá</b> ejercer sus facultades de comprobación y denunciar</td>
+          <td class="n">—</td></tr>
+        <tr><td><b>400 Bis 1</b><br><span class="f">Agravante por la<br>calidad del autor</span></td>
+          <td>Las penas <b>se aumentan desde un tercio hasta en una mitad</b> cuando quien realiza
+            la conducta tiene el carácter de <b>consejero, administrador, funcionario, empleado,
+            apoderado o prestador de servicios de cualquier persona sujeta al régimen de
+            prevención</b>, o la realiza <b>dentro de los dos años siguientes</b> a haberse separado
+            del cargo. Además, <b>inhabilitación</b> para desempeñar empleo, cargo o comisión en
+            personas morales sujetas al régimen, <b>hasta por</b> un tiempo igual al de la prisión
+            impuesta, que corre <b>después</b> de cumplirla</td>
+          <td class="n">6 años 8 meses<br>a 22 años 6 meses<br>1,333 a 7,500 días multa<br><span style="color:var(--ink-3)">envolvente: el piso supone el aumento de un tercio y el techo el de una mitad<br>más inhabilitación</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="nota alerta">
+    <span class="k">La frase del 400 Bis 1 que hay que leer despacio</span>
+    <p><b>«…o prestador de servicios de cualquier persona sujeta al régimen de prevención de
+      operaciones con recursos de procedencia ilícita.»</b></p>
+    <p>Ese enunciado no describe a un lavador profesional. Describe al Representante Encargado del
+      Cumplimiento, al contador externo, al despacho que integra el expediente, a quien arma los
+      Avisos y al apoderado que firma. Y sigue alcanzándolos <b>dos años después</b> de dejar el
+      cargo. No convierte en delito el mal cumplimiento —para eso están los artículos 62 a 64 de la
+      LFPIORPI—, pero agrava la pena de quien participe en la conducta del 400 Bis por razón de su
+      posición, y añade una inhabilitación que empieza a correr cuando termina la prisión.</p>
+  </div>
+
+  <h3>El plano propio de la LFPIORPI</h3>
+
+  <div class="nota alerta" style="border-left-color:var(--n3)">
+    <span class="k">Artículo 62 · prisión de dos a ocho años y de quinientos a dos mil días multa</span>
+    <p>Se sanciona a quien: <b>I.</b> proporcione a quienes deban dar Avisos información,
+      documentación, datos o imágenes <b>falsos</b>, para ser incorporados en aquellos;
+      <b>II.</b> <b>modifique o altere</b> información destinada a incorporarse a los Avisos o al
+      desahogo de requerimientos, o ya incorporada en Avisos presentados; <b>III.</b> incorpore a
+      los Avisos o al desahogo de requerimientos <b>datos o imágenes ilegibles</b> que impidan el
+      conocimiento efectivo de su contenido.</p>
+  </div>
+
+  <div class="fichas">
+    <div class="ficha"><div class="cuerpo">
+      <h4>La fracción I apunta al cliente, no a quien recibe de buena fe</h4>
+      <p>Sanciona a <strong>quien entrega</strong> la información falsa a quien debe avisar. En la
+        mayoría de los casos, ése es el propio cliente. Es un argumento útil para exigir
+        documentación: negarse a darla activa el deber de abstención del artículo 21; falsearla
+        es un delito del cliente.</p></div>
+      <div class="monto"><span class="f">62, fr. I L · 21 L</span></div></div>
+
+    <div class="ficha"><div class="cuerpo">
+      <h4>La fracción III es la más peligrosa para el operador</h4>
+      <p>«…datos o imágenes <strong>ilegibles que impidan</strong> el conocimiento efectivo de su
+        contenido» no describe una falsedad: describe <strong>un escaneo malo</strong>, una copia
+        cortada, un archivo corrupto. Es la fracción que convierte una práctica de oficina descuidada en materia penal.</p></div>
+      <div class="monto"><span class="f">62, fr. III L</span><br><span class="tag n3" style="margin-top:8px">Adicionada 2025</span></div></div>
+
+    <div class="ficha"><div class="cuerpo">
+      <h4>Desde 2025 estos delitos <strong>admiten comisión culposa</strong></h4>
+      <p>Es decir: <strong>ya no hace falta la intención</strong>. Antes de la reforma, una
+        alteración negligente no encuadraba; hoy sí.</p></div>
+      <div class="monto"><span class="f">62, penúltimo pfo. L</span><br><span class="tag n3" style="margin-top:8px">Adicionado 2025</span></div></div>
+
+    <div class="ficha"><div class="cuerpo">
+      <h4>Y trae su propia salida, que es una regla de oro</h4>
+      <p>La comisión culposa <strong>no será sancionada</strong> cuando medie un error de tipo
+        vencible y éste <strong>sea corregido de manera espontánea antes de que la autoridad tome
+        conocimiento del delito</strong>. Corregir el expediente a tiempo tiene, por tanto,
+        efecto penal y no sólo administrativo.</p></div>
+      <div class="monto"><span class="f">62, último pfo. L</span><br><span class="tag" style="margin-top:8px;border-color:var(--brand);color:var(--brand)">La salida</span></div></div>
+
+    <div class="ficha"><div class="cuerpo">
+      <h4>Artículo 63 · prisión de cuatro a diez años</h4>
+      <p>Al servidor público que use indebidamente la información, y —fracción II— a quien
+        <strong>revele o divulgue</strong> por cualquier medio información que vincule a una
+        persona con un Aviso o con un requerimiento entre autoridades,
+        <strong>exista el Aviso o no</strong>. Alcanza a particulares.</p></div>
+      <div class="monto"><span class="f">63 L</span></div></div>
+
+    <div class="ficha"><div class="cuerpo">
+      <h4>Artículo 64 · duplicación e inhabilitación</h4>
+      <p>Las penas del artículo 62 y de la fracción II del 63 <strong>se duplican</strong> si quien
+        comete el ilícito es —o fue en los dos años anteriores— servidor público encargado de
+        prevenir, detectar, investigar o juzgar delitos.</p>
+      <p style="margin-top:8px">Y con independencia de eso, el segundo párrafo alcanza a
+        <strong>todos</strong>: «a quienes incurran en cualquiera de los delitos previstos en los
+        artículos 62 y 63» se les impone además <strong>inhabilitación para desempeñar el servicio
+        público</strong> por un tiempo igual al de la prisión, que empieza a correr
+        <strong>después</strong> de cumplirla.</p></div>
+      <div class="monto"><span class="f">64 L</span></div></div>
+  </div>
+
+  <div class="nota">
+    <span class="k">Sobre los «días multa»: el error de conversión más común</span>
+    <p>Los artículos 62 y 63 sancionan con «quinientos a dos mil días multa <b>conforme al Código
+      Penal Federal</b>». El día multa <b>no se calcula sobre la UMA</b>: conforme al Código Penal
+      Federal: <b>«El día multa equivale a la percepción neta diaria del sentenciado en el momento
+      de consumar el delito, tomando en cuenta todos sus ingresos»</b>, y <b>«el límite inferior del
+      día multa será el equivalente al salario mínimo diario vigente en el lugar donde se consumó
+      el delito»</b> <span class="f">(29 CPF)</span>. Sólo el <b>límite inferior</b> se fija por
+      remisión al salario mínimo —referencia que, por la desindexación constitucional, suele leerse
+      hoy como UMA—. De ahí que multiplicar «dos mil días multa» por la UMA produzca únicamente el
+      <b>piso</b> posible, nunca la cifra real: ésta depende del ingreso de la persona sentenciada y
+      puede ser mucho mayor. Es un error que circula en muchas láminas.</p>
+  </div>
+
+  <h3>Y una consecuencia patrimonial que no depende de una condena</h3>
+  <div class="prose">
+    <p>La escalera de consecuencias no termina en la prisión. La <b>Ley Nacional de Extinción de
+      Dominio</b>, reglamentaria del artículo 22 constitucional, establece que la acción se ejercita
+      «a través de un proceso jurisdiccional <b>de naturaleza civil</b>, de carácter patrimonial y
+      con prevalencia a la oralidad, mediante una vía especial», que corresponde al Ministerio
+      Público, y que es <b>«autónomo, distinto e independiente»</b> del proceso penal
+      <span class="f">(8 LNED)</span>. No hace falta una condena.</p>
+    <p>Procede sobre bienes de carácter patrimonial cuya legítima procedencia no pueda
+      acreditarse, en particular los que sean instrumento, objeto o producto de hechos ilícitos, sin
+      perjuicio del lugar de su realización, y sobre bienes utilizados para ocultar otros de origen
+      ilícito o mezclados con ellos <span class="f">(7 LNED)</span>. Y no hace falta condena: la
+      acción se ejerce «aun cuando no se haya determinado la responsabilidad penal»
+      <span class="f">(14 LNED)</span>.</p>
+    <div class="nota alerta" style="margin-top:18px">
+      <span class="k">Una precisión que casi nadie hace</span>
+      <p>Los «hechos ilícitos» son los del <b>párrafo cuarto del artículo 22 constitucional</b>, que
+        menciona expresamente los recursos de procedencia ilícita. La Ley los precisaba en su
+        artículo 1, pero <b>el inciso que remitía a los artículos 400 Bis y 400 Bis 1 del Código
+        Penal Federal fue declarado inválido por la Suprema Corte</b> (acción de
+        inconstitucionalidad, publicada en el DOF el 6 de enero de 2022). El sustento vigente es el
+        texto constitucional, no el legal — y quien cite la LNED sin advertirlo está citando texto
+        muerto.</p>
+    </div>
+  </div>
+
+  <div class="nota alerta">
+    <span class="k">Y aquí el expediente vuelve a ser la defensa</span>
+    <p>La Ley presume la buena fe <b>en la adquisición</b> de los bienes —la porción que extendía
+      la presunción al «destino» también fue declarada inválida por la Suprema Corte—, y para gozar
+      de esa presunción la parte demandada debe acreditarla suficientemente, <b>entre otras</b>
+      cosas: que consta <b>en documento de fecha cierta y anterior a la realización del hecho
+      ilícito</b>; que <b>oportuna y debidamente se pagaron los impuestos y contribuciones</b>
+      causados por los hechos jurídicos en que funda su buena fe o su justo título; y que el bien
+      fue adquirido de forma lícita —y, si lo que alega es posesión, que la ejerció de forma
+      continua, pública y pacífica— <span class="f">(15 LNED)</span>.</p>
+    <p>Dicho de otro modo: el mismo expediente que evita la multa administrativa es el que acredita
+      la buena fe en un procedimiento de extinción de dominio. No son dos archivos: es uno.</p>
+  </div>
+
+  <div class="prose">
+    <p>Para efectos de esta sesión el punto es acotado y suficiente: <b>multa → revocación o
+      cancelación → responsabilidad penal → pérdida del bien</b> son cuatro consecuencias
+      distintas, con cuatro autoridades distintas, cuatro estándares de prueba distintos, y
+      ninguna excluye a las otras.</p>
+  </div>
+</section>
+
+<!-- ══════════════ 13 ══════════════ -->
+<section id="s13">
+  <p class="eyebrow"><span class="sec-n">13</span> &nbsp;Exigibilidad</p>
+  <h2>Qué puede multarse hoy y qué todavía no</h2>
+  <p class="dek">Para no vender pánico con lo que no toca — y para no relajar con lo que sí.</p>
+
+  <div class="tw">
+    <table>
+      <caption>Estado de exigibilidad al 26 de agosto de 2026</caption>
+      <thead><tr><th style="width:44%">Obligación</th><th style="width:20%">Hoy</th><th>Exigible desde</th></tr></thead>
+      <tbody>
+        <tr><td>Identificación del cliente · actividad u ocupación · beneficiario controlador ·
+          conservación diez años · alta y registro en el padrón · facilidades para la visita ·
+          Avisos e Informes <span class="f">(18, fr. I a VI L)</span></td>
+          <td><span class="tag n3">Sancionable</span></td><td class="n">17 de julio de 2025</td></tr>
+        <tr><td>Designación y vigencia del Representante Encargado del Cumplimiento
+          <span class="f">(20 L)</span></td>
+          <td><span class="tag n1">Sin multa directa</span></td>
+          <td class="n">17 de julio de 2025 · responsabilidad personal del órgano de administración</td></tr>
+        <tr><td>Prohibiciones de uso de efectivo y metales <span class="f">(32 L)</span> ·
+          identificación de la forma de pago por fedatarios <span class="f">(33 L)</span></td>
+          <td><span class="tag n3">Sancionable</span></td><td class="n">Vigentes</td></tr>
+        <tr><td>Atender requerimientos sobre el beneficiario controlador y conservar el soporte ·
+          <b>todas las sociedades mercantiles</b> <span class="f">(33 Bis L)</span></td>
+          <td><span class="tag n3">Sancionable</span></td><td class="n">17 de julio de 2025</td></tr>
+        <tr><td>Registrar al beneficiario controlador en el sistema electrónico de la Secretaría de
+          Economía <span class="f">(33 Ter L)</span></td>
+          <td><span class="tag fu">Condicionado</span></td>
+          <td class="n">Depende del sistema y de los lineamientos que emita la Secretaría</td></tr>
+        <tr><td>Evaluación con enfoque basado en riesgos <span class="f">(18, fr. VII L)</span></td>
+          <td><span class="tag fu">No sancionable</span></td><td class="n">1 de marzo de 2027</td></tr>
+        <tr><td><b>Documento o Manual de Políticas Internas</b> del art. 37 RCG — texto vigente,
+          no diferido <span class="f">(37 RCG)</span></td>
+          <td><span class="tag n3">Exigible</span></td>
+          <td class="n">A los 90 días naturales del alta y registro</td></tr>
+        <tr><td>Contenido mínimo del Manual, catorce fracciones <span class="f">(37 Bis RCG)</span></td>
+          <td><span class="tag fu">Aún no</span></td><td class="n">30 de noviembre de 2026</td></tr>
+        <tr><td>Que el Manual <b>incorpore la metodología</b> del Capítulo II Quáter
+          <span class="f">(18, fr. VIII L · Trans. Tercero RCG)</span></td>
+          <td><span class="tag fu">No sancionable</span></td><td class="n">1 de marzo de 2027</td></tr>
+        <tr><td>Grado de riesgo, conocimiento del cliente y beneficiario controlador conforme a los
+          nuevos capítulos de las Reglas</td>
+          <td><span class="tag fu">No sancionable</span></td><td class="n">Actos u operaciones desde el 1 de marzo de 2027</td></tr>
+        <tr><td>Procesos de selección de personal <span class="f">(18, fr. IX L)</span></td>
+          <td><span class="tag fu">No sancionable</span></td><td class="n">Contrataciones desde el 1 de marzo de 2027</td></tr>
+        <tr><td>Programas anuales de capacitación <span class="f">(18, fr. IX L · 39 Bis RCG)</span></td>
+          <td><span class="tag fu">No sancionable</span></td><td class="n">Periodo del 1 de enero al 31 de diciembre de 2027</td></tr>
+        <tr><td>Actualización de información de proveedores de servicios de activos virtuales ya
+          registrados <span class="f">(10 Bis RCG · Trans. Décimo Segundo)</span></td>
+          <td><span class="tag fu">Aún no</span></td><td class="n">30 de mayo de 2027</td></tr>
+        <tr><td>Consulta de Personas Políticamente Expuestas nacionales en Consulta PEP 2.0
+          <span class="f">(23 Quáter 1 RCG · Trans. Décimo)</span></td>
+          <td><span class="tag fu">Aún no disponible</span></td><td class="n">30 de agosto de 2027</td></tr>
+        <tr><td>Mecanismos automatizados de monitoreo <span class="f">(18, fr. X L · 41 RCG)</span></td>
+          <td><span class="tag fu">No sancionable</span></td><td class="n">1 de junio de 2027</td></tr>
+        <tr><td>Auditoría y dictamen <span class="f">(18, fr. XI L)</span></td>
+          <td><span class="tag fu">No sancionable</span></td><td class="n">Ejercicio 2028 · dictamen entregado al auditado a más tardar el último día hábil de marzo de 2029. Ojo con la fecha: el 31 cae en sábado y el 30 es Viernes Santo (la Pascua de 2029 es el 1 de abril). Si el SAT mantiene su criterio de declarar inhábiles Jueves y Viernes Santo en la Miscelánea, el último día hábil será el miércoles 28. Sólo queda firme con la RMF del ejercicio</td></tr>
+        <tr><td>Consulta del buzón <b>al menos una vez cada día hábil</b> <span class="f">(5, 5 Bis y 6 RCG)</span></td>
+          <td><span class="tag fu">Aún no</span></td><td class="n">30 de noviembre de 2026 — sujeto a que opere el sistema: el Trans. Décimo Primero da a la Secretaría hasta el 30 de julio de 2027 para implementarlo</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="nota alerta">
+    <span class="k">La trampa del calendario</span>
+    <p>Que algo no sea sancionable hoy no significa que no vaya a serlo dentro de la ventana de vida
+      de una verificación. El artículo 36 <b>limita</b> la verificación a los actos u operaciones
+      considerados Actividades Vulnerables realizados dentro de los <b>cinco años inmediatos
+      anteriores</b> al inicio de la visita. Una verificación practicada en 2030 alcanza 2027 y 2028 — y para
+      entonces todas las obligaciones de esta tabla serán exigibles.</p>
+    <p>Y al revés: <b>la evaluación de riesgos del 1 de marzo de 2027 se construye con la
+      información de 2026</b>. El año base ya está corriendo.</p>
+    <p><b>Una advertencia sobre la capacitación y la auditoría.</b> Las fechas de 2027 y 2028
+      salen de los transitorios de las Reglas. Pero el <b>Transitorio Segundo del decreto de
+      reforma a la Ley</b> dispone que el periodo anual de las fracciones IX y XI del artículo 18
+      «se entenderá por año calendario, por lo que el primer periodo iniciará el 1 de enero del año
+      siguiente a aquel en que se publique el presente Decreto» — es decir, <b>2026</b>. La lectura
+      de que priva el calendario de las Reglas se apoya en el Transitorio Tercero, que difirió esas
+      fracciones a lo que las Reglas dispusieran. Es defendible, pero no es pacífica: conviene
+      documentar la capacitación de 2026 aunque no se considere exigible.</p>
+  </div>
+</section>
+
+<!-- ══════════════ 14 ══════════════ -->
+<section id="s14">
+  <p class="eyebrow"><span class="sec-n">14</span> &nbsp;Herramienta</p>
+  <h2>Autodiagnóstico de exposición</h2>
+  <p class="dek">Doce preguntas sobre lo que un inspector puede probar hoy con el marco vigente.
+    Responde con honestidad: nadie ve el resultado más que tú.</p>
+
+  <div class="tool">
+    <div id="diag"></div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:20px">
+      <button type="button" id="evaluar">Ver resultado</button>
+      <button type="button" class="ghost" id="reiniciar">Reiniciar</button>
+    </div>
+    <div class="res" id="resDiag" aria-live="polite">
+      <div class="rango" id="marcaDiag">Contesta las doce preguntas</div>
+      <div class="sub" id="subDiag">Ninguna respuesta sale de este navegador.</div>
+      <div class="marcador" id="mDiag" hidden></div>
+      <ul id="detDiag"></ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ CIERRE ══════════════ -->
+<section style="border-top:0;padding-top:0">
+  <div class="cierre">
+    <p class="eyebrow" style="color:var(--brand)">Lunes 31 de agosto de 2026</p>
+    <h2 style="letter-spacing:-.5px">Antes de que llegue el SAT</h2>
+    <p class="dek" style="margin-top:-6px">Guía práctica de supervisión, multas y defensa en la LFPIORPI</p>
+    <div class="prose">
+      <p>Todo lo que se trabajó en esta jornada queda publicado como <b>curso abierto y gratuito en
+        360Educa</b>, a partir del <b>lunes 31 de agosto de 2026</b>. La grabación de la hora, este
+        micrositio completo y los diez descargables, sin costo y sin caducidad.</p>
+      <p>El nombre no es una figura retórica: es el criterio que ordena todo el material. La
+        abstención de sancionar del artículo 55 exige que el cumplimiento sea espontáneo y
+        <b>previo</b> al inicio de las facultades de verificación. La ventana se cierra en el
+        instante en que llega el oficio. Todo lo que se hace antes vale; casi nada de lo que se
+        hace después.</p>
+      <p>La regla de la casa, dicha en voz alta: <b>la clase es abierta y las plantillas se llenan
+        en vivo. El acompañamiento para tu caso concreto es lo que se paga.</b></p>
+      <p style="font-size:15px"><b>Este micrositio vive en:</b><br>
+        <a id="ligaViva" href="#" style="font-family:'IBM Plex Mono',monospace;font-size:14px;word-break:break-all">—</a><br>
+        <span style="color:var(--ink-3)">La dirección no cambia: cuando el material se actualiza, sigue siendo la misma.</span></p>
+      <p style="color:var(--ink-3);font-size:15px">Registro y liga del curso en 360Educa: se comparten en el
+        chat de la sesión y por correo a toda la lista.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p><b>GMC360 · 360Educa · Jornada360.</b> Micrositio de apoyo a la sesión del miércoles 26 de
+      agosto de 2026, impartida por Maribel Vázquez y Claudia Ceja.</p>
+    <p>Fuentes de cotejo: LFPIORPI, texto vigente con la última reforma publicada en el Diario
+      Oficial de la Federación el 16 de julio de 2025, en vigor desde el 17 de julio de 2025.
+      Reglamento de la LFPIORPI, con la reforma publicada el 27 de marzo de 2026, en vigor desde el
+      28 de marzo de 2026. Reglas de Carácter General, con el ACUERDO 115/2026 publicado el 7 de
+      agosto de 2026, vigencia general el 30 de noviembre de 2026. Ley Federal de Procedimiento
+      Administrativo, última reforma DOF 14 de noviembre de 2025. Ley Federal de Procedimiento
+      Contencioso Administrativo, última reforma DOF 9 de junio de 2026. Código Penal Federal,
+      última reforma DOF 13 de marzo de 2026. Ley Nacional de Extinción de Dominio, última reforma
+      DOF 28 de noviembre de 2025. Ley de Amparo, última reforma DOF 16 de octubre de 2025.
+      Estos cinco ordenamientos se citan como supletorios o conexos, según se indica en cada caso.</p>
+    <p>Los montos se expresan en veces el valor diario de la Unidad de Medida y Actualización y se
+      convierten con <b>$117.31</b>, valor vigente desde el 1 de febrero de 2026 conforme al INEGI.
+      Deben recalcularse con el valor vigente al momento del acto u operación.</p>
+    <p><b>Este material es de carácter informativo y didáctico. No constituye asesoría legal para
+      un caso concreto</b>, no sustituye la lectura del texto normativo ni prejuzga sobre el
+      criterio que la autoridad adopte en un asunto determinado.</p>
+  </footer>
+</section>
+
+
+<!-- ══════════════ 15 · DESCARGABLES ══════════════ -->
+<section id="s15">
+  <p class="eyebrow"><span class="sec-n">15</span> &nbsp;Material</p>
+  <h2>Descargables</h2>
+  <p class="dek">Todo lo que se trabajó en esta jornada, libre y sin registro. Las citas de cada
+    pieza fueron cotejadas contra el texto publicado por revisores independientes de quien las redactó.</p>
+
+  <div class="dl">
+    <a class="dlc destacado" href="SANC_S00_ALU_00_Infografia_Escalones_y_Relojes.pdf" download>
+      <span class="dlk">Infografía · PDF</span>
+      <b>Los tres escalones y los tres relojes</b>
+      <span class="dld">Una hoja para imprimir: cuánto cuesta cada conducta, el punto de cruce de los $7,625,150 y la línea de tiempo desde que llega el oficio.</span>
+    </a>
+    <a class="dlc destacado" href="SANC_S00_ALU_00_Infografia_Escalones_y_Relojes.png" download>
+      <span class="dlk">Infografía · PNG</span>
+      <b>La misma hoja, para el celular</b>
+      <span class="dld">Imagen de alta resolución. Se guarda en la galería y se consulta sin conexión.</span>
+    </a>
+    <a class="dlc destacado" href="SANC_S00_ALU_01_Infografia_Cinco_Preguntas.pdf" download>
+      <span class="dlk">Infografía · PDF</span>
+      <b>Las cinco que siempre preguntan</b>
+      <span class="dld">Las dudas que se repiten en cada sesión, con su artículo y su respuesta corta. Y la banda de color que dice si la norma la resuelve o si es interpretación.</span>
+    </a>
+    <a class="dlc destacado" href="SANC_S00_ALU_01_Infografia_Cinco_Preguntas.png" download>
+      <span class="dlk">Infografía · PNG</span>
+      <b>Las cinco, para el celular</b>
+      <span class="dld">La misma hoja en imagen de alta resolución.</span>
+    </a>
+    <a class="dlc" href="SANC_S00_ALU_02_Semaforo_Exposicion_Sancionatoria.pdf" download>
+      <span class="dlk">PDF</span><b>Semáforo de exposición sancionatoria</b>
+      <span class="dld">Diecisiete puntos de control para medir la exposición propia.</span></a>
+    <a class="dlc" href="SANC_S00_ALU_03_Primeras_48_horas_requerimiento.pdf" download>
+      <span class="dlk">PDF</span><b>Las primeras 48 horas</b>
+      <span class="dld">Qué hacer cuando llega el oficio. Plazos por tipo de requerimiento y la decisión de autocorregirse.</span></a>
+    <a class="dlc" href="SANC_S00_ALU_04_Matriz_Sanciones_53_54.xlsx" download>
+      <span class="dlk">Excel</span><b>Matriz de sanciones 53 → 54</b>
+      <span class="dld">Con importes en pesos. Se cambia la UMA en una celda y el libro entero se recalcula.</span></a>
+    <a class="dlc" href="SANC_S00_ALU_05_Calendario_Exigibilidad_LFPIORPI.pdf" download>
+      <span class="dlk">PDF · Word</span><b>Calendario único de exigibilidad</b>
+      <span class="dld">Qué se exige, desde cuándo, y qué sigue condicionado a un acto de la autoridad que aún no ocurre.</span></a>
+    <a class="dlc" href="SANC_S00_ALU_06_Tabla_Unica_Plazos_LFPIORPI.pdf" download>
+      <span class="dlk">PDF · Word</span><b>Tabla única de plazos</b>
+      <span class="dld">Conservación, trámite, activos virtuales, procedimiento y autocorrección, en una sola tabla de control.</span></a>
+    <a class="dlc" href="SANC_S00_ALU_07_Modelo_Escrito_Autocorreccion_55Bis.docx" download>
+      <span class="dlk">Word</span><b>Modelo de escrito de autocorrección</b>
+      <span class="dld">Artículo 55 Bis del Reglamento, para adaptar. Léase antes la advertencia de «Las primeras 48 horas».</span></a>
+    <a class="dlc" href="SANC_S00_ALU_08_Donde_multa_el_SAT_Lectura_completa.pdf" download>
+      <span class="dlk">PDF</span><b>Esta guía en prosa corrida</b>
+      <span class="dld">Todo el contenido de este sitio en dieciséis páginas, para leer o para alimentar a un asistente de lectura.</span></a>
+    <a class="dlc destacado" href="SANC_S00_ALU_09_Preguntas_Respuestas_135_ACUERDO115.pdf" download>
+      <span class="dlk">PDF · Word</span><b>135 preguntas del sector, respondidas</b>
+      <span class="dld">Ochenta y cinco páginas. Cada respuesta con su fundamento y una banda de color que dice de dónde viene:
+      verde si hay precepto que la resuelve, ámbar si es interpretación, rojo si hoy no hay forma de responder.
+      Con calendario de exigibilidad, tabla de plazos y una nota sobre el Grado de Riesgo.</span></a>
+  </div>
+
+  <p class="nota-dl">Material de análisis y capacitación. No es asesoría legal ni interpretación oficial y no
+    sustituye el criterio de la autoridad competente. Se mantiene vivo: si se detecta cualquier error o
+    precisión, se actualiza en esta misma liga.</p>
+</section>
+
+</main>
+</div>
+</div>
+
+<script>
+(function(){
+"use strict";
+var UMA = 117.31;
+
+/* ─────────── LIGA VIVA: la página muestra su propia dirección ─────────── */
+(function(){
+  var a = document.getElementById("ligaViva");
+  if(!a) return;
+  var u = location.origin + location.pathname.replace(/index\.html$/i,"");
+  if(location.protocol === "file:"){
+    a.textContent = "(se mostrará al publicarse en línea)";
+    a.removeAttribute("href");
+    a.style.color = "var(--ink-3)";
+  } else {
+    a.textContent = u;
+    a.href = u;
+  }
+})();
+
+var mx = function(n){ return "$" + n.toLocaleString("es-MX",{minimumFractionDigits:2,maximumFractionDigits:2}); };
+var um = function(n){ return n.toLocaleString("es-MX") + " UMA"; };
+
+/* ─────────── CALCULADORA ─────────── */
+var NIV = {
+  1:{min:200,  max:2000,  et:"Bajo",  f:"Art. 54, fr. I"},
+  2:{min:2000, max:10000, et:"Medio", f:"Art. 54, fr. II"},
+  3:{min:10000,max:65000, et:"Alto",  f:"Art. 54, fr. III"}
+};
+var INF = [
+ {id:"req",    n:1, t:"No atendí un requerimiento del SAT dentro de los diez días hábiles", f:"53, fr. I → 54, fr. I"},
+ {id:"a18id",  n:1, t:"No identifiqué al cliente o no recabé copia de su identificación", f:"18, fr. I · 53, fr. II → 54, fr. I"},
+ {id:"a18act", n:1, t:"No recabé la actividad u ocupación al establecer una relación de negocios", f:"18, fr. II · 53, fr. II → 54, fr. I"},
+ {id:"a18bc",  n:1, t:"Falta la identificación del beneficiario controlador, o la declaración firmada del cliente persona física", f:"18, fr. III · 53, fr. II → 54, fr. I"},
+ {id:"a18cons",n:1, t:"Expedientes fuera del domicilio registrado, o conservados por menos de diez años", f:"18, fr. IV · 53, fr. II → 54, fr. I"},
+ {id:"a18pad", n:1, t:"Padrón desactualizado: domicilio, actividad, representante o estructura", f:"18, fr. IV Bis · 53, fr. II → 54, fr. I"},
+ {id:"a18fac", n:1, t:"No di las facilidades necesarias para la visita de verificación", f:"18, fr. V · 53, fr. II → 54, fr. I"},
+ {id:"a18cero",n:1, t:"No presenté el informe del mes en que no hubo operaciones objeto de Aviso", f:"18, fr. VI · 53, fr. II → 54, fr. I"},
+ {id:"ext",    n:1, t:"Presenté un Aviso con retraso, dentro de los treinta días siguientes", f:"53, fr. III → 54, fr. I"},
+ {id:"ext30",  n:"dual", t:"Presenté un Aviso con más de treinta días de retraso", f:"53, fr. III, 2º pfo. · remisión defectuosa"},
+ {id:"r24",    n:1, t:"Presenté Avisos sin reunir los requisitos del artículo 24", f:"53, fr. IV → 54, fr. I"},
+ {id:"a33",    n:2, t:"Fedatario: no identifiqué la forma de pago en las operaciones que exigen hacerlo", f:"33 L · 53, fr. V → 54, fr. II"},
+ {id:"a33bis", n:2, t:"Sociedad mercantil: no atendí el requerimiento de beneficiario controlador, no conservé el soporte, o no presenté el aviso de inscripción por transmisión de partes sociales o acciones", f:"33 Bis, pfos. 1º y 2º · 53, fr. V → 54, fr. II"},
+ {id:"a33ter", n:"condicionado", t:"Sociedad mercantil: no registré al beneficiario controlador en el sistema de la Secretaría de Economía", f:"33 Ter · exigibilidad condicionada"},
+ {id:"omi",    n:3, t:"Omití presentar un Aviso", f:"53, fr. VI → 54, fr. III"},
+ {id:"efe",    n:3, t:"Pagué o acepté pago en efectivo o metales por encima del umbral del artículo 32", f:"53, fr. VII → 54, fr. III"},
+ {id:"rep",    n:"sinmulta", t:"No designé Representante Encargado del Cumplimiento, o la designación no fue aceptada", f:"20 L · no está en el catálogo del art. 53"},
+ {id:"fut",    n:"futuro", t:"No tengo metodología de riesgos, Manual, capacitación anual, mecanismos automatizados ni auditoría", f:"18, fr. VII a XI · diferidas"}
+];
+
+var lista = document.getElementById("lista");
+if (lista){
+  INF.forEach(function(i){
+    var row = document.createElement("div");
+    row.className = "chk";
+    row.innerHTML =
+      '<input type="checkbox" id="c_'+i.id+'">' +
+      '<label for="c_'+i.id+'"><b>'+i.t+'</b><span class="f">'+i.f+'</span></label>' +
+      '<input type="number" min="1" value="1" id="q_'+i.id+'" aria-label="Número de veces" ' +
+      'style="width:74px;flex:0 0 auto;padding:5px 7px;font-size:13px">';
+    lista.appendChild(row);
+  });
+}
+
+function calcular(){
+  var minU=0, maxU=0, minU3=0, maxU3=0, notas=[], hay=false, hay3=false;
+  INF.forEach(function(i){
+    var c = document.getElementById("c_"+i.id);
+    if(!c || !c.checked) return;
+    var q = Math.max(1, parseInt(document.getElementById("q_"+i.id).value,10)||1);
+    if(i.n === "sinmulta"){
+      notas.push("<b>Sin multa directa.</b> El artículo 53 no incluye al artículo 20. La consecuencia es que el cumplimiento recae personalmente en los integrantes del órgano de administración o en quien funja como administrador único (20, 2º pfo. L). Calcula por separado los incumplimientos del artículo 18 cometidos en ese periodo, que sí se multan y se imputan a quienes dirigen.");
+      return;
+    }
+    if(i.n === "condicionado"){
+      notas.push("<b>Exigibilidad condicionada.</b> La conducta del artículo 33 Ter está tipificada en el artículo 53, fracción V, pero su cumplimiento depende de que existan y operen el sistema electrónico de la Secretaría de Economía y los lineamientos que debe emitir la Secretaría. Mientras no operen, no debe computarse como infracción.");
+      return;
+    }
+    if(i.n === "futuro"){
+      notas.push("<b>No sancionable hoy.</b> Las fracciones VII a XI del artículo 18 son exigibles a partir del 1 de marzo de 2027, el 1 de junio de 2027 y el ejercicio 2028, según la obligación. No suman al cálculo — pero sí entran en el alcance de cinco años del artículo 36.");
+      return;
+    }
+    if(i.n === "dual"){
+      hay = true; hay3 = true;
+      minU3 += 10000*q; maxU3 += 65000*q;
+      notas.push("<b>Extemporaneidad de más de treinta días · dos lecturas.</b> Se calcula con la lectura teleológica (escalón alto, 10,000 a 65,000 UMA por Aviso). La lectura literal de la remisión del artículo 53, fracción III, segundo párrafo llevaría al artículo 54, fracción II — escalón medio: " + mx(2000*q*UMA) + " a " + mx(10000*q*UMA) + ". En ambas lecturas, treinta y un días cuestan al menos diez veces más que veintinueve.");
+      return;
+    }
+    hay = true;
+    var N = NIV[i.n];
+    if(i.n === 3){ hay3 = true; minU3 += N.min*q; maxU3 += N.max*q; }
+    else { minU += N.min*q; maxU += N.max*q; }
+  });
+
+  var rango = document.getElementById("rango");
+  var sub = document.getElementById("sub");
+  var det = document.getElementById("detalle");
+  det.innerHTML = "";
+
+  if(!hay){
+    rango.textContent = notas.length ? "Sin importe calculable" : "Selecciona al menos un incumplimiento";
+    sub.textContent = "Los montos se calculan con la UMA diaria de " + mx(UMA) + ".";
+    notas.forEach(function(n){ var li=document.createElement("li"); li.innerHTML=n; det.appendChild(li); });
+    return;
+  }
+
+  var val = parseFloat(document.getElementById("valorOp").value) || 0;
+  var min3 = minU3*UMA, max3 = maxU3*UMA;
+  var usaPct = false;
+  if(hay3 && val > 0){
+    var altMin = val*0.10, altMax = val*1.00;
+    var umaMin = min3, umaMax = max3;
+    /* El art. 54, fr. III manda aplicar "la que resulte MAYOR" entre dos alternativas completas.
+       Se comparan como bloques —nunca se mezcla el piso de una con el techo de otra— tomando
+       como criterio el tope de cada una, que es el punto de comparación habitual. */
+    usaPct = altMax > umaMax;
+    if(usaPct){ min3 = altMin; max3 = altMax; }
+    notas.push("<b>Escalón alto: dos alternativas.</b> El artículo 54, fracción III aplica <b>la que resulte mayor</b> entre el rango en UMA —" + mx(umaMin) + " a " + mx(umaMax) + "— y el 10 % a 100 % del valor del acto u operación —" + mx(altMin) + " a " + mx(altMax) + "—. Con " + mx(val) + " " + (usaPct ? "manda <b>el porcentaje</b>" : "manda <b>el rango en UMA</b>") + ". La comparación se hace operación por operación, no sobre un total agregado.");
+  }
+
+  var min = minU*UMA + min3;
+  var max = maxU*UMA + max3;
+  var etiqueta = "";
+
+  var b = document.getElementById("benef").value;
+  if(b === "1"){
+    etiqueta = "Abstención de sancionar · art. 55, 1er pfo.";
+    notas.unshift("<b>No es condonación: es abstención de sancionar</b>, por única ocasión y sobre el total de las infracciones. Exige <b>cuatro</b> condiciones acumulativas: cumplir con las obligaciones respectivas, hacerlo de manera <b>espontánea</b>, hacerlo <b>previamente</b> al inicio de las facultades de verificación, y <b>reconocer expresamente</b> la falta dentro del plazo inicial del procedimiento de verificación — los cinco días hábiles del artículo 68 de la LFPA —, formalizado conforme al artículo 55 Bis del Reglamento. Sin las cuatro, el importe vuelve a ser " + mx(min) + " a " + mx(max) + ".");
+    min = 0; max = 0;
+  } else if(b === "2"){
+    etiqueta = "Reducción de hasta 50 % · art. 55, 2º pfo.";
+    notas.unshift("<b>La reducción es de «hasta» un cincuenta por ciento</b>, no un 50 % automático: el porcentaje lo determina la autoridad. Por eso el rango va del 50 % de la multa mínima hasta la multa completa. Requiere haber ejercido ya la abstención, regularizar de forma espontánea y previa, y reconocer expresamente la falta dentro del plazo inicial del procedimiento sancionador — los quince días hábiles del artículo 72 de la LFPA, que sólo se abren si la autoridad sustancia ese procedimiento.");
+    min = min*0.5;
+  }
+
+  rango.innerHTML = (min===0 && max===0)
+    ? "Sin multa, si se acreditan las cuatro condiciones"
+    : mx(min) + " <span style='color:var(--ink-3)'>a</span> " + mx(max);
+  sub.textContent = (etiqueta ? etiqueta + " · " : "") +
+    (usaPct
+      ? "Base: 10 % a 100 % del valor" + ((minU+maxU) > 0 ? " · más " + um(minU) + " a " + um(maxU) + " de los demás escalones" : "")
+      : "Base: " + um(minU+minU3) + " a " + um(maxU+maxU3)) +
+    " · UMA diaria de " + mx(UMA);
+
+  notas.push("<b>La autoridad gradúa dentro del rango</b> conforme al artículo 60 de la Ley: reincidencia y acciones correctivas aplicadas, cuantía del acto u operación e intención de realizar la conducta. Este resultado es un orden de magnitud, no una predicción.");
+  notas.forEach(function(n){ var li=document.createElement("li"); li.innerHTML=n; det.appendChild(li); });
+}
+
+var bCalc = document.getElementById("calc");
+if(bCalc) bCalc.addEventListener("click", calcular);
+var bReset = document.getElementById("reset");
+if(bReset) bReset.addEventListener("click", function(){
+  INF.forEach(function(i){
+    document.getElementById("c_"+i.id).checked = false;
+    document.getElementById("q_"+i.id).value = 1;
+  });
+  document.getElementById("valorOp").value = "";
+  document.getElementById("benef").value = "0";
+  document.getElementById("rango").textContent = "Selecciona al menos un incumplimiento";
+  document.getElementById("sub").textContent = "Los montos se calculan con la UMA diaria de " + mx(UMA);
+  document.getElementById("detalle").innerHTML = "";
+});
+
+/* ─────────── AUTODIAGNÓSTICO ─────────── */
+var PREG = [
+ {p:3, t:"¿Cruzaste tu facturación de 2025 y 2026 contra los Avisos que presentaste en esos mismos periodos?", f:"53, fr. VI · escalón alto · se prueba con el art. 10 Bis R"},
+ {p:3, t:"¿Presentaste el informe correspondiente en todos los meses en que no hubo operaciones objeto de Aviso?", f:"18, fr. VI L · cada mes es una infracción"},
+ {p:3, t:"¿Tu alta y registro refleja hoy tu domicilio, actividad, representante y estructura reales?", f:"18, fr. IV Bis L · y habilita la visita en el domicilio del RFC"},
+ {p:3, t:"¿La designación de tu Representante está aceptada en el Portal, con su RFC y su Firma Electrónica Avanzada?", f:"20 L · sin multa directa, pero la responsabilidad se traslada al órgano de administración"},
+ {p:3, t:"¿Todos tus Avisos de los últimos doce meses se presentaron a más tardar el día 17 del mes siguiente?", f:"23 L · pasados 30 días cambia de escalón"},
+ {p:3, t:"¿Conservas la información en el domicilio registrado ante la Secretaría para ese efecto, por diez años?", f:"18, fr. IV L · 20 R · Trans. Séptimo del decreto"},
+ {p:2, t:"¿Tus expedientes de clientes persona física incluyen la declaración firmada sobre beneficiario controlador?", f:"18, fr. III, 2º pfo. L"},
+ {p:2, t:"¿Los comprobantes de domicilio de tus expedientes cumplen la antigüedad que exigen los anexos aplicables?", f:"Reglas vigentes · hallazgo del primer día de visita"},
+ {p:2, t:"¿Tienes evidencia del cotejo contra original en las copias que integran los expedientes?", f:"Reglas vigentes · legibilidad y cotejo"},
+ {p:2, t:"¿Tienes constancia de abstención en los casos en que el cliente se negó a dar información?", f:"21, 2º pfo. L · el expediente prueba la infracción"},
+ {p:2, t:"Si eres sociedad mercantil: ¿puedes acreditar hoy quién es tu beneficiario controlador y conservas el soporte?", f:"33 Bis y 33 Ter L · aplica seas o no Actividad Vulnerable"},
+ {p:1, t:"¿Documentaste las detecciones que pudieron ameritar Aviso de 24 horas, aunque el formato aún no exista?", f:"18, fr. VI, 2º pfo. L · Trans. Quinto R"}
+];
+
+var diag = document.getElementById("diag");
+if(diag){
+  PREG.forEach(function(q,k){
+    var row = document.createElement("div");
+    row.className = "chk";
+    row.innerHTML =
+      '<input type="checkbox" id="d_'+k+'">' +
+      '<label for="d_'+k+'"><b>'+q.t+'</b><span class="f">'+q.f+'</span></label>';
+    diag.appendChild(row);
+  });
+}
+
+function evaluar(){
+  var puntos=0, altos=0, pend=[];
+  PREG.forEach(function(q,k){
+    var c = document.getElementById("d_"+k);
+    if(c && !c.checked){ puntos += q.p; if(q.p===3) altos++; pend.push(q); }
+  });
+  var marca = document.getElementById("marcaDiag");
+  var sub = document.getElementById("subDiag");
+  var m = document.getElementById("mDiag");
+  var det = document.getElementById("detDiag");
+  det.innerHTML = ""; m.innerHTML = ""; m.hidden = false;
+
+  var color, texto;
+  if(puntos === 0){ color="var(--brand)"; texto="Sin hallazgos en este ejercicio"; }
+  else if(puntos <= 5){ color="var(--n1)"; texto="Exposición baja"; }
+  else if(puntos <= 13){ color="var(--n2)"; texto="Exposición media"; }
+  else { color="var(--n3)"; texto="Exposición alta"; }
+
+  marca.textContent = texto;
+  marca.style.color = color;
+  sub.textContent = puntos + " de 29 puntos de exposición · " + pend.length + " de 12 preguntas sin cubrir · " + altos + " de ellas en el grupo de mayor exposición";
+
+  m.innerHTML =
+    '<div><b style="color:'+color+'">'+puntos+'</b><span>Puntos de exposición<br>de 29 posibles</span></div>' +
+    '<div><b>'+pend.length+'</b><span>Preguntas sin cubrir<br>de doce</span></div>' +
+    '<div><b style="color:var(--n3)">'+altos+'</b><span>Preguntas del grupo<br>de mayor exposición</span></div>';
+
+  if(pend.length === 0){
+    var li0 = document.createElement("li");
+    li0.innerHTML = "<b>Ninguna respuesta pendiente.</b> Conviene documentar la evidencia de cada punto con fecha: en el artículo 55 y en el artículo 60 lo que vale no es haber cumplido, sino poder demostrar <b>cuándo</b> se cumplió.";
+    det.appendChild(li0);
+  } else {
+    pend.forEach(function(q){
+      var li = document.createElement("li");
+      li.innerHTML = "<b>" + q.t.replace(/^¿|\?$/g,"") + "</b><br><span style='color:var(--ink-3)'>" + q.f + "</span>";
+      det.appendChild(li);
+    });
+    var liF = document.createElement("li");
+    liF.innerHTML = "<b>La ventana del artículo 55 sigue abierta mientras no llegue el oficio.</b> Todo lo anterior es corregible de manera espontánea hoy. En el instante en que se notifica una orden de visita o un requerimiento sobre la misma obligación y el mismo periodo, deja de haber espontaneidad.";
+    liF.style.borderLeftColor = "var(--brand)";
+    det.appendChild(liF);
+  }
+}
+
+var bEval = document.getElementById("evaluar");
+if(bEval) bEval.addEventListener("click", evaluar);
+var bRe = document.getElementById("reiniciar");
+if(bRe) bRe.addEventListener("click", function(){
+  PREG.forEach(function(q,k){ document.getElementById("d_"+k).checked = false; });
+  document.getElementById("marcaDiag").textContent = "Contesta las doce preguntas";
+  document.getElementById("marcaDiag").style.color = "var(--ink)";
+  document.getElementById("subDiag").textContent = "Ninguna respuesta sale de este navegador.";
+  document.getElementById("mDiag").hidden = true;
+  document.getElementById("detDiag").innerHTML = "";
+});
+})();
+</script>
+</body>
+</html>
