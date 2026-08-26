@@ -18,7 +18,7 @@ Se publica desde este repositorio a Netlify: cada archivo que se sube aquí repu
 | | |
 |---|---|
 | `index.html` | El micrositio. Calculadora de sanciones, autodiagnóstico de doce preguntas y tabla de exigibilidad. Funciona sin servidor: se abre en cualquier navegador. |
-| `descargables/` | Diez piezas de trabajo, en PDF, PNG, Word y Excel. Las dos infografías son el material que se reparte en vivo. |
+| `descargables/` | Once piezas de trabajo, en PDF, PNG, Word y Excel. Las dos infografías son el material que se reparte en vivo. |
 
 ## Los descargables
 
@@ -32,6 +32,7 @@ Se publica desde este repositorio a Netlify: cada archivo que se sube aquí repu
 | `SANC_S00_ALU_05_Calendario_Exigibilidad_LFPIORPI.pdf` · `.docx` | Qué se exige, desde cuándo, y qué sigue condicionado a un acto de la autoridad que aún no ocurre. |
 | `SANC_S00_ALU_06_Tabla_Unica_Plazos_LFPIORPI.pdf` · `.docx` | Conservación, trámite, proveedores de servicios con activos virtuales, procedimiento y autocorrección. |
 | `SANC_S00_ALU_07_Modelo_Escrito_Autocorreccion_55Bis.docx` | Modelo de escrito del artículo 55 Bis del Reglamento, para adaptar. Léase antes la advertencia del descargable 03. |
+| `SANC_S00_ALU_10_Libro_Donde_multa_el_SAT.pdf` | **El libro.** El contenido completo de la sesión en veinte páginas y quince capítulos, con portada, índice y el fundamento de cada afirmación. |
 | `SANC_S00_ALU_08_Donde_multa_el_SAT_Lectura_completa.pdf` | El contenido del micrositio en prosa corrida, para leer o para alimentar a un asistente de lectura. |
 | `SANC_S00_ALU_09_Preguntas_Respuestas_135_ACUERDO115.pdf` · `.docx` | **Las 135 preguntas del sector, respondidas.** Ochenta y cinco páginas. Cada respuesta con su fundamento y una banda de color: verde si hay precepto que la resuelve, ámbar si es interpretación, rojo si hoy no hay forma de responder. Incluye índice, calendario de exigibilidad, tabla de plazos y una nota sobre el Grado de Riesgo. |
 
