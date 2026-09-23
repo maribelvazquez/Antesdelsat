@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Bienvenida · Antes de que llegue el SAT</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<style>
+:root{
+  --ground:#0B100D; --surface:#131A15; --surface-2:#18211A;
+  --line:#26332A; --line-soft:#1C251E;
+  --ink:#E8F0EA; --ink-2:#A9BCAF; --ink-3:#78897E;
+  --brand:#8CC63F; --brand-2:#B6E06E; --brand-ink:#0B100D;
+}
+@media (prefers-color-scheme:light){
+  :root:not([data-theme="dark"]){
+    --ground:#F6F8F4; --surface:#FFFFFF; --surface-2:#EEF2EA;
+    --line:#D3DBCF; --line-soft:#E4E9E0;
+    --ink:#11170F; --ink-2:#4A574C; --ink-3:#6C7A6E;
+    --brand:#4C7A17; --brand-2:#3C6210; --brand-ink:#FFFFFF;
+  }
+}
+:root[data-theme="light"]{
+  --ground:#F6F8F4; --surface:#FFFFFF; --surface-2:#EEF2EA;
+  --line:#D3DBCF; --line-soft:#E4E9E0;
+  --ink:#11170F; --ink-2:#4A574C; --ink-3:#6C7A6E;
+  --brand:#4C7A17; --brand-2:#3C6210; --brand-ink:#FFFFFF;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);font-family:"Source Serif 4",Georgia,serif;
+  font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,.sans{font-family:"IBM Plex Sans Condensed","Helvetica Neue",Arial,sans-serif}
+.mono{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace}
+a{color:var(--brand);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.wrap{max-width:860px;margin:0 auto;padding:48px 20px 64px}
+.kicker{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:20px}
+.kicker .b{font-family:"IBM Plex Sans Condensed",sans-serif;font-size:11px;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--brand-ink);background:var(--brand);padding:4px 9px;font-weight:600}
+.kicker .d{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--ink-3);letter-spacing:.04em}
+h1{font-size:clamp(32px,6vw,54px);line-height:1.02;letter-spacing:-.03em;font-weight:700;margin-bottom:16px;text-wrap:balance}
+h1 em{font-style:normal;color:var(--brand)}
+h2{font-size:clamp(22px,3vw,28px);line-height:1.15;font-weight:700;letter-spacing:-.015em;margin-bottom:8px;text-wrap:balance}
+.lede{font-size:clamp(17px,2vw,19.5px);color:var(--ink-2);max-width:62ch;line-height:1.55;margin-bottom:28px}
+.eyebrow{font-family:"IBM Plex Sans Condensed",sans-serif;font-size:11px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--brand);margin-bottom:10px;font-weight:600}
+section{padding:36px 0;border-top:1px solid var(--line-soft)}
+.prose{max-width:66ch}
+.prose p{margin-bottom:1em;color:var(--ink-2)}
+.prose p b{color:var(--ink)}
+.prose p:last-child{margin-bottom:0}
+.btn{display:inline-block;font-family:"IBM Plex Sans Condensed",sans-serif;font-size:13px;font-weight:600;
+  letter-spacing:.07em;text-transform:uppercase;text-decoration:none;background:var(--brand);color:var(--brand-ink);
+  padding:12px 20px;border:1px solid var(--brand);transition:filter .15s}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:transparent;color:var(--brand)}
+.foot{margin-top:40px;padding-top:22px;border-top:1px solid var(--line-soft);font-size:12.5px;color:var(--ink-3);line-height:1.6}
+.foot p{margin-bottom:.6em;max-width:80ch}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.idea{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--brand);padding:22px 22px;margin-top:6px}
+.idea p{font-size:18px;line-height:1.55;color:var(--ink)}
+.idea .src{display:block;margin-top:10px;font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--ink-3);letter-spacing:.03em}
+.mat{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:22px}
+@media(min-width:640px){.mat{grid-template-columns:1fr 1fr}}
+.mat div{background:var(--surface);padding:16px 18px}
+.mat b{display:block;font-family:"IBM Plex Sans Condensed",sans-serif;font-size:16px;font-weight:600;color:var(--ink);margin-bottom:4px}
+.mat span{display:block;font-size:14.5px;color:var(--ink-2);line-height:1.5}
+.pasos{list-style:none;counter-reset:p;margin-top:20px;display:flex;flex-direction:column;gap:12px;max-width:66ch}
+.pasos li{counter-increment:p;display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:baseline;color:var(--ink-2);font-size:16px}
+.pasos li::before{content:counter(p,decimal-leading-zero);font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--brand);font-weight:600}
+.pasos li b{color:var(--ink)}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.aviso{font-size:14px;color:var(--ink-3);margin-top:16px;max-width:66ch}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="kicker">
+    <span class="b">360Educa</span>
+    <span class="d">Curso abierto y gratuito · GMC360</span>
+  </div>
+  <h1>Bienvenida a <em>Antes de que llegue el SAT</em></h1>
+  <p class="lede">Guía práctica de supervisión, multas y defensa en la LFPIORPI tras la reforma de
+    2025–2026: quién revisa, por dónde entra, con qué plazos, cuánto cuesta cada incumplimiento y
+    qué salidas quedan. Con los montos en pesos y el fundamento a la vista en cada afirmación.</p>
+</header>
+
+<section>
+  <p class="eyebrow">La idea que ordena todo el curso</p>
+  <h2>El nombre no es una figura retórica</h2>
+  <div class="idea">
+    <p>La abstención de sancionar exige que el cumplimiento sea espontáneo y <b>previo</b> al inicio
+      de las facultades de verificación. La ventana se cierra en el instante en que llega el oficio.
+      Todo lo que se hace antes vale; casi nada de lo que se hace después.</p>
+    <span class="src">Artículo 55 de la LFPIORPI</span>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Lo que vas a encontrar</p>
+  <h2>El material completo, sin costo y sin caducidad</h2>
+  <div class="mat">
+    <div><b>La sesión grabada</b><span>La jornada completa, con sus diapositivas.</span></div>
+    <div><b>La herramienta</b><span>El mapa del régimen sancionador, con calculadora de sanciones, autodiagnóstico de doce preguntas y tabla de exigibilidad.</span></div>
+    <div><b>Los audios</b><span>Siete episodios, unos 44 minutos en total, para escuchar donde quieras.</span></div>
+    <div><b>Los descargables</b><span>Infografías, semáforo de exposición, las primeras 48 horas, matriz de sanciones, calendario, tabla de plazos y modelo de escrito de autocorrección.</span></div>
+    <div><b>Las 135 preguntas</b><span>Las dudas del sector respondidas, cada una con su fundamento y una banda de color que dice de dónde viene la respuesta.</span></div>
+    <div><b>El libro y las normas</b><span>Todo el contenido en formato de libro, y los textos normativos que se citan a lo largo del curso.</span></div>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Cómo aprovecharlo</p>
+  <h2>Una sugerencia de recorrido</h2>
+  <ol class="pasos">
+    <li><span><b>Empieza por la sesión</b> para tener el panorama completo en una sola hora.</span></li>
+    <li><span><b>Abre la herramienta</b> y calcula tu propia exposición: la calculadora y el autodiagnóstico no guardan nada, todo se queda en tu navegador.</span></li>
+    <li><span><b>Descarga lo que vas a usar</b> y tenlo a la mano el día que llegue un requerimiento.</span></li>
+    <li><span><b>Vuelve cuando lo necesites.</b> El material se actualiza cuando hay cambios relevantes en la normativa.</span></li>
+  </ol>
+  <div class="cta">
+    <a class="btn" href="https://antesdelsat.netlify.app/" target="_blank" rel="noopener">Abrir la herramienta</a>
+  </div>
+  <p class="aviso">La herramienta se abre en una pestaña nueva, así no pierdes tu lugar en el curso.</p>
+</section>
+
+<div class="foot">
+  <p><b>GMC360 · 360Educa.</b> Imparten Maribel Vázquez y Claudia Ceja.</p>
+  <p>Material de análisis y capacitación. No es asesoría legal ni interpretación oficial y no sustituye
+    el criterio de la autoridad competente.</p>
+</div>
+
+</div>
+</body>
+</html>

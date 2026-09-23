@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Qué sigue · Antes de que llegue el SAT</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<style>
+:root{
+  --ground:#0B100D; --surface:#131A15; --surface-2:#18211A;
+  --line:#26332A; --line-soft:#1C251E;
+  --ink:#E8F0EA; --ink-2:#A9BCAF; --ink-3:#78897E;
+  --brand:#8CC63F; --brand-2:#B6E06E; --brand-ink:#0B100D;
+}
+@media (prefers-color-scheme:light){
+  :root:not([data-theme="dark"]){
+    --ground:#F6F8F4; --surface:#FFFFFF; --surface-2:#EEF2EA;
+    --line:#D3DBCF; --line-soft:#E4E9E0;
+    --ink:#11170F; --ink-2:#4A574C; --ink-3:#6C7A6E;
+    --brand:#4C7A17; --brand-2:#3C6210; --brand-ink:#FFFFFF;
+  }
+}
+:root[data-theme="light"]{
+  --ground:#F6F8F4; --surface:#FFFFFF; --surface-2:#EEF2EA;
+  --line:#D3DBCF; --line-soft:#E4E9E0;
+  --ink:#11170F; --ink-2:#4A574C; --ink-3:#6C7A6E;
+  --brand:#4C7A17; --brand-2:#3C6210; --brand-ink:#FFFFFF;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);font-family:"Source Serif 4",Georgia,serif;
+  font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,.sans{font-family:"IBM Plex Sans Condensed","Helvetica Neue",Arial,sans-serif}
+.mono{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace}
+a{color:var(--brand);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.wrap{max-width:860px;margin:0 auto;padding:48px 20px 64px}
+.kicker{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:20px}
+.kicker .b{font-family:"IBM Plex Sans Condensed",sans-serif;font-size:11px;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--brand-ink);background:var(--brand);padding:4px 9px;font-weight:600}
+.kicker .d{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--ink-3);letter-spacing:.04em}
+h1{font-size:clamp(32px,6vw,54px);line-height:1.02;letter-spacing:-.03em;font-weight:700;margin-bottom:16px;text-wrap:balance}
+h1 em{font-style:normal;color:var(--brand)}
+h2{font-size:clamp(22px,3vw,28px);line-height:1.15;font-weight:700;letter-spacing:-.015em;margin-bottom:8px;text-wrap:balance}
+.lede{font-size:clamp(17px,2vw,19.5px);color:var(--ink-2);max-width:62ch;line-height:1.55;margin-bottom:28px}
+.eyebrow{font-family:"IBM Plex Sans Condensed",sans-serif;font-size:11px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--brand);margin-bottom:10px;font-weight:600}
+section{padding:36px 0;border-top:1px solid var(--line-soft)}
+.prose{max-width:66ch}
+.prose p{margin-bottom:1em;color:var(--ink-2)}
+.prose p b{color:var(--ink)}
+.prose p:last-child{margin-bottom:0}
+.btn{display:inline-block;font-family:"IBM Plex Sans Condensed",sans-serif;font-size:13px;font-weight:600;
+  letter-spacing:.07em;text-transform:uppercase;text-decoration:none;background:var(--brand);color:var(--brand-ink);
+  padding:12px 20px;border:1px solid var(--brand);transition:filter .15s}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:transparent;color:var(--brand)}
+.foot{margin-top:40px;padding-top:22px;border-top:1px solid var(--line-soft);font-size:12.5px;color:var(--ink-3);line-height:1.6}
+.foot p{margin-bottom:.6em;max-width:80ch}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+/* cupón */
+.cupon{display:grid;grid-template-columns:1fr;gap:16px;align-items:center;background:var(--surface);
+  border:1px dashed var(--brand);padding:20px 22px;margin:4px 0 8px}
+@media(min-width:620px){.cupon{grid-template-columns:1fr auto}}
+.cupon .k{font-family:"IBM Plex Sans Condensed",sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+.cupon .code{font-family:"IBM Plex Mono",monospace;font-size:clamp(24px,4.4vw,34px);font-weight:600;letter-spacing:.04em;color:var(--brand);line-height:1.15;margin:4px 0 2px;word-break:break-all}
+.cupon .s{font-size:14.5px;color:var(--ink-2)}
+.copiar{font-family:"IBM Plex Sans Condensed",sans-serif;font-size:13px;font-weight:600;letter-spacing:.07em;
+  text-transform:uppercase;background:var(--brand);color:var(--brand-ink);border:0;padding:12px 18px;cursor:pointer;white-space:nowrap}
+.copiar:hover{filter:brightness(1.08)}
+/* programas */
+.progs{display:grid;grid-template-columns:1fr;gap:14px;margin-top:22px}
+@media(min-width:760px){.progs{grid-template-columns:repeat(3,1fr)}}
+.prog{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);
+  border-top:3px solid var(--brand);padding:20px 18px 18px}
+.prog .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink-3);letter-spacing:.06em;margin-bottom:10px}
+.prog h3{font-size:19px;line-height:1.2;font-weight:700;margin-bottom:10px;letter-spacing:-.005em}
+.prog p{font-size:15px;color:var(--ink-2);line-height:1.5;margin-bottom:12px}
+.prog .para{font-size:13.5px;color:var(--ink-3);border-top:1px solid var(--line-soft);padding-top:10px;margin-bottom:16px}
+.prog .para b{display:block;font-family:"IBM Plex Sans Condensed",sans-serif;font-size:10.5px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--brand);font-weight:600;margin-bottom:3px}
+.prog .btn{margin-top:auto;text-align:center}
+/* gmc360 */
+.gmc{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--brand);padding:24px 22px}
+.gmc .acc{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.recuerda{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;font-size:15.5px;color:var(--ink-2);margin-top:18px}
+.recuerda b{font-family:"IBM Plex Mono",monospace;color:var(--brand);font-weight:600;letter-spacing:.03em}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="kicker">
+    <span class="b">360Educa</span>
+    <span class="d">Antes de que llegue el SAT · cierre del curso</span>
+  </div>
+  <h1>¿Qué <em>sigue</em>?</h1>
+  <p class="lede">Gracias por llegar hasta aquí. Nos da mucho gusto que hayas terminado el curso. Como
+    agradecimiento por ser parte de 360Educa, te regalamos un cupón de 10% de descuento para que
+    sigas fortaleciendo tus conocimientos en materia de cumplimiento.</p>
+
+  <div class="cupon">
+    <div>
+      <div class="k">Tu cupón · 10% de descuento</div>
+      <div class="code" id="codigo">SOY360EDUCA</div>
+      <div class="s">Válido en los tres programas de esta página.</div>
+    </div>
+    <button type="button" class="copiar" id="copiar">Copiar código</button>
+  </div>
+</header>
+
+<section>
+  <p class="eyebrow">Del saber al hacer</p>
+  <h2>Ya sabes dónde está el riesgo</h2>
+  <div class="prose">
+    <p>Si llegaste hasta aquí, ya sabes algo que la mayoría del sector todavía no sabe: <b>dónde está
+      el riesgo, qué conductas pueden generar sanciones y qué exige actualmente la normativa.</b></p>
+    <p>Saber dónde está el riesgo es la mitad del trabajo. La otra mitad es implementarlo
+      correctamente en tu propia operación, y eso requiere herramientas, acompañamiento y
+      conocimiento especializado.</p>
+  </div>
+
+  <div class="progs">
+    <article class="prog">
+      <div class="n">01 · Actividades vulnerables</div>
+      <h3>Implementación de la LFPIORPI</h3>
+      <p>Construye tus propios documentos de cumplimiento y lleva la normativa a la práctica.</p>
+      <div class="para"><b>Para quién</b>Para quienes ya realizan una actividad vulnerable y necesitan implementar correctamente sus obligaciones.</div>
+      <a class="btn" href="https://www.360educa.com/courses/reforma-al-reglamento-lfpiorpi" target="_blank" rel="noopener">Ver el curso</a>
+    </article>
+    <article class="prog">
+      <div class="n">02 · El cargo</div>
+      <h3>Representante de Cumplimiento 360</h3>
+      <p>Conoce qué responde el Representante de Cumplimiento y hasta dónde llega su responsabilidad.</p>
+      <div class="para"><b>Para quién</b>Para quienes acaban de aceptar este cargo o buscan fortalecer su desempeño.</div>
+      <a class="btn" href="https://www.360educa.com/courses/representantecumplimiento" target="_blank" rel="noopener">Ver el curso</a>
+    </article>
+    <article class="prog">
+      <div class="n">03 · Sector financiero</div>
+      <h3>Membresía 360</h3>
+      <p>Prepárate para la certificación CNBV en materia de PLD/FT con una metodología de estudio y acompañamiento especializado.</p>
+      <div class="para"><b>Para quién</b>Para quienes trabajan o buscan trabajar en una entidad financiera supervisada.</div>
+      <a class="btn" href="https://www.360educa.com/courses/membresia360-cnbv" target="_blank" rel="noopener">Ver la membresía</a>
+    </article>
+  </div>
+</section>
+
+<section>
+  <div class="gmc">
+    <p class="eyebrow">GMC360 · Cuando no basta un curso</p>
+    <h2>¿Tu caso necesita algo más puntual?</h2>
+    <div class="prose">
+      <p>Si requieres una revisión puntual, un diagnóstico o acompañamiento para implementar, y no
+        solamente un curso, <b>GMC360 puede acompañarte en esa parte.</b> Escríbenos y con gusto te
+        orientamos sobre la opción que mejor se adapte a tu necesidad.</p>
+    </div>
+    <div class="acc">
+      <a class="btn" href="https://wa.me/525549150005?text=Hola%2C%20vengo%20del%20curso%20gratuito%20%C2%ABAntes%20de%20que%20llegue%20el%20SAT%C2%BB%20de%20360Educa%20%28p%C3%A1gina%20%C2%BFQu%C3%A9%20sigue%3F%29.%20Me%20gustar%C3%ADa%20orientaci%C3%B3n%20sobre%20mi%20caso." target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="prose">
+    <p><b>Gracias por confiar en 360Educa.</b> 💙</p>
+    <p>El material de este curso queda disponible sin caducidad y se actualiza cuando existen
+      cambios relevantes en la normativa.</p>
+  </div>
+  <p class="recuerda">Recuerda: 10% de descuento en los cursos mencionados con el código <b>SOY360EDUCA</b></p>
+</section>
+
+<div class="foot">
+  <p><b>GMC360 · 360Educa.</b> Curso abierto «Antes de que llegue el SAT. Guía práctica de supervisión,
+    multas y defensa en la LFPIORPI».</p>
+</div>
+
+</div>
+<script>
+(function(){
+  var b=document.getElementById("copiar"), c=document.getElementById("codigo");
+  function ok(){b.textContent="¡Copiado!";setTimeout(function(){b.textContent="Copiar código";},2000);}
+  function manual(){
+    try{var r=document.createRange();r.selectNodeContents(c);var s=window.getSelection();s.removeAllRanges();s.addRange(r);
+      if(document.execCommand&&document.execCommand("copy")){ok();return;}}catch(e){}
+    b.textContent="Selecciónalo y cópialo";
+  }
+  b.addEventListener("click",function(){
+    try{
+      if(navigator.clipboard&&navigator.clipboard.writeText){
+        navigator.clipboard.writeText(c.textContent.trim()).then(ok,manual);
+      }else{manual();}
+    }catch(e){manual();}
+  });
+})();
+</script>
+</body>
+</html>
