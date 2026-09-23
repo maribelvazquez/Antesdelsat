@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Bienvenida 1 · Antes de que llegue el SAT</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<style>
+:root{
+  --ground:#0B100D; --surface:#131A15; --surface-2:#18211A;
+  --line:#26332A; --line-soft:#1C251E;
+  --ink:#E8F0EA; --ink-2:#A9BCAF; --ink-3:#78897E;
+  --brand:#8CC63F; --brand-2:#B6E06E; --brand-ink:#0B100D;
+}
+@media (prefers-color-scheme:light){
+  :root:not([data-theme="dark"]){
+    --ground:#F6F8F4; --surface:#FFFFFF; --surface-2:#EEF2EA;
+    --line:#D3DBCF; --line-soft:#E4E9E0;
+    --ink:#11170F; --ink-2:#4A574C; --ink-3:#6C7A6E;
+    --brand:#4C7A17; --brand-2:#3C6210; --brand-ink:#FFFFFF;
+  }
+}
+:root[data-theme="light"]{
+  --ground:#F6F8F4; --surface:#FFFFFF; --surface-2:#EEF2EA;
+  --line:#D3DBCF; --line-soft:#E4E9E0;
+  --ink:#11170F; --ink-2:#4A574C; --ink-3:#6C7A6E;
+  --brand:#4C7A17; --brand-2:#3C6210; --brand-ink:#FFFFFF;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);font-family:"Source Serif 4",Georgia,serif;
+  font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,.sans{font-family:"IBM Plex Sans Condensed","Helvetica Neue",Arial,sans-serif}
+.mono{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace}
+a{color:var(--brand);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.wrap{max-width:860px;margin:0 auto;padding:48px 20px 64px}
+.kicker{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:20px}
+.kicker .b{font-family:"IBM Plex Sans Condensed",sans-serif;font-size:11px;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--brand-ink);background:var(--brand);padding:4px 9px;font-weight:600}
+.kicker .d{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--ink-3);letter-spacing:.04em}
+h1{font-size:clamp(32px,6vw,54px);line-height:1.02;letter-spacing:-.03em;font-weight:700;margin-bottom:16px;text-wrap:balance}
+h1 em{font-style:normal;color:var(--brand)}
+h2{font-size:clamp(22px,3vw,28px);line-height:1.15;font-weight:700;letter-spacing:-.015em;margin-bottom:8px;text-wrap:balance}
+.lede{font-size:clamp(17px,2vw,19.5px);color:var(--ink-2);max-width:62ch;line-height:1.55;margin-bottom:28px}
+.eyebrow{font-family:"IBM Plex Sans Condensed",sans-serif;font-size:11px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--brand);margin-bottom:10px;font-weight:600}
+section{padding:36px 0;border-top:1px solid var(--line-soft)}
+.prose{max-width:66ch}
+.prose p{margin-bottom:1em;color:var(--ink-2)}
+.prose p b{color:var(--ink)}
+.prose p:last-child{margin-bottom:0}
+.btn{display:inline-block;font-family:"IBM Plex Sans Condensed",sans-serif;font-size:13px;font-weight:600;
+  letter-spacing:.07em;text-transform:uppercase;text-decoration:none;background:var(--brand);color:var(--brand-ink);
+  padding:12px 20px;border:1px solid var(--brand);transition:filter .15s}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:transparent;color:var(--brand)}
+.foot{margin-top:40px;padding-top:22px;border-top:1px solid var(--line-soft);font-size:12.5px;color:var(--ink-3);line-height:1.6}
+.foot p{margin-bottom:.6em;max-width:80ch}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.pre{font-family:"IBM Plex Sans Condensed",sans-serif;font-size:clamp(16px,2vw,19px);color:var(--ink-2);margin-bottom:6px}
+.hero h1{font-size:clamp(40px,8vw,72px);margin-bottom:26px}
+/* no / sí */
+.vs{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+@media(min-width:640px){.vs{grid-template-columns:1fr 1fr}}
+.vs div{background:var(--surface);padding:18px 20px}
+.vs .lab{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px;display:block}
+.vs .no .lab{color:var(--ink-3)}
+.vs .no p{color:var(--ink-3);font-size:15.5px}
+.vs .si{border-left:3px solid var(--brand)}
+.vs .si .lab{color:var(--brand)}
+.vs .si p{color:var(--ink);font-size:16.5px}
+/* capas */
+.capas{display:grid;grid-template-columns:1fr;gap:0;margin:22px 0 20px;border-left:2px solid var(--line)}
+@media(min-width:680px){.capas{grid-template-columns:repeat(3,1fr);border-left:0;border-top:2px solid var(--line)}}
+.capa{position:relative;padding:4px 0 18px 20px}
+@media(min-width:680px){.capa{padding:18px 16px 0 0}}
+.capa::before{content:"";position:absolute;left:-7px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--ground);border:2px solid var(--brand)}
+@media(min-width:680px){.capa::before{left:0;top:-7px}}
+.capa:last-child::before{background:var(--brand)}
+.capa .fe{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--brand);font-weight:600}
+.capa b{display:block;font-family:"IBM Plex Sans Condensed",sans-serif;font-size:19px;margin:2px 0 2px}
+.capa span{font-size:14px;color:var(--ink-3)}
+.ya{background:var(--surface);border:1px solid var(--line);padding:16px 18px;font-size:16px;color:var(--ink-2)}
+.ya b{color:var(--ink)}
+/* se lleva */
+.lleva{display:grid;grid-template-columns:1fr;gap:12px;margin-top:20px}
+@media(min-width:640px){.lleva{grid-template-columns:1fr 1fr}}
+.ll{background:var(--surface);border:1px solid var(--line);padding:18px 18px 16px;display:grid;grid-template-columns:40px 1fr;gap:12px;align-items:start}
+.ll .i{font-family:"IBM Plex Mono",monospace;font-size:22px;font-weight:600;color:var(--brand);line-height:1}
+.ll b{display:block;font-family:"IBM Plex Sans Condensed",sans-serif;font-size:17px;line-height:1.25;margin-bottom:4px}
+.ll span{font-size:14.5px;color:var(--ink-2);line-height:1.5}
+/* a quién */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chips span{font-family:"IBM Plex Sans Condensed",sans-serif;font-size:15px;border:1px solid var(--line);background:var(--surface);padding:7px 13px;color:var(--ink)}
+.chips span.fuerte{border-color:var(--brand);color:var(--brand);font-weight:600}
+.noes{margin-top:22px;border:1px solid var(--line);border-left:3px solid var(--ink-3);padding:16px 18px;font-size:15.5px;color:var(--ink-2);background:var(--surface-2)}
+.noes b{color:var(--ink)}
+/* mapa */
+.mapa{list-style:none;margin-top:20px;border-top:1px solid var(--line)}
+.mapa li{display:grid;grid-template-columns:48px 1fr;gap:14px;padding:14px 0;border-bottom:1px solid var(--line-soft);align-items:baseline}
+.mapa .n{font-family:"IBM Plex Mono",monospace;font-size:22px;font-weight:600;color:var(--ink-3);line-height:1}
+.mapa b{font-family:"IBM Plex Sans Condensed",sans-serif;font-size:18px;color:var(--ink)}
+.mapa p{font-size:15px;color:var(--ink-2);margin-top:2px}
+.mapa li.aqui{background:var(--surface);border-left:3px solid var(--brand);padding-left:12px;margin-left:-15px}
+.mapa li.aqui .n{color:var(--brand)}
+.mapa li.hl .n{color:var(--brand)}
+.tagaqui{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;background:var(--brand);color:var(--brand-ink);padding:2px 7px;margin-left:8px;vertical-align:3px}
+/* calculadora */
+.flujo{display:grid;grid-template-columns:1fr;gap:10px;align-items:stretch;margin:20px 0 8px}
+@media(min-width:720px){.flujo{grid-template-columns:1fr 1fr 28px 1.2fr}}
+.fbox{background:var(--surface);border:1px solid var(--line);padding:14px 16px}
+.fbox .k{display:block;font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-bottom:5px}
+.fbox b{font-family:"IBM Plex Sans Condensed",sans-serif;font-size:17px;line-height:1.25;display:block}
+.fbox small{display:block;font-size:13px;color:var(--ink-3);margin-top:3px}
+.fbox.out{border-color:var(--brand);border-width:2px}
+.fbox.out .k{color:var(--brand)}
+.flecha{display:flex;align-items:center;justify-content:center;font-family:"IBM Plex Mono",monospace;color:var(--brand);font-size:22px}
+@media(max-width:719px){.flecha{transform:rotate(90deg);height:20px}}
+.tipo{font-size:15.5px;color:var(--ink-2);max-width:66ch;margin-top:12px}
+.tipo b{color:var(--ink)}
+.diag{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;background:var(--surface);border:1px solid var(--line);padding:18px 20px;margin-top:22px}
+.diag .big{font-family:"IBM Plex Mono",monospace;font-size:46px;font-weight:600;color:var(--brand);line-height:1}
+.diag p{font-size:15.5px;color:var(--ink-2)}
+.diag p b{color:var(--ink)}
+/* descargas */
+.cuenta{display:flex;align-items:baseline;gap:12px;margin:18px 0 14px;flex-wrap:wrap}
+.cuenta .big{font-family:"IBM Plex Mono",monospace;font-size:40px;font-weight:600;color:var(--brand);line-height:1}
+.cuenta span{font-size:15px;color:var(--ink-2)}
+.piezas{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+@media(min-width:620px){.piezas{grid-template-columns:1fr 1fr}}
+.piezas div{background:var(--surface);padding:11px 14px;font-size:14.5px;color:var(--ink);display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.piezas em{font-style:normal;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink-3);white-space:nowrap}
+@media(min-width:620px){.piezas div:last-child{grid-column:1 / -1}}
+.pronto{font-size:14px;color:var(--ink-3);margin-top:10px}
+/* cierre */
+.final{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--brand);padding:26px 22px;margin-top:8px}
+.final p{font-size:18px;line-height:1.55;color:var(--ink);max-width:62ch}
+.final .btn{margin-top:20px}
+.final small{display:block;font-size:13.5px;color:var(--ink-3);margin-top:10px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <div class="kicker">
+    <span class="b">360Educa</span>
+    <span class="d">Antes de que llegue el SAT · Empiece aquí · 1 de 2</span>
+  </div>
+  <p class="pre">Este curso responde una sola pregunta:</p>
+  <h1>¿Dónde multa <em>el SAT</em>?</h1>
+  <div class="vs">
+    <div class="no"><span class="lab">No es esto</span>
+      <p>Dónde podría multar en 2027, cuando entren las obligaciones nuevas de metodología de riesgos y auditoría.</p></div>
+    <div class="si"><span class="lab">Es esto</span>
+      <p><b>Dónde multa hoy</b>, con la norma que ya está vigente y con la información que la autoridad ya tiene en sus manos.</p></div>
+  </div>
+</header>
+
+<section>
+  <p class="eyebrow">Por qué ahora</p>
+  <h2>La reforma se escribió en tres capas</h2>
+  <div class="capas">
+    <div class="capa"><div class="fe">16 jul 2025</div><b>La Ley</b></div>
+    <div class="capa"><div class="fe">27 mar 2026</div><b>El Reglamento</b></div>
+    <div class="capa"><div class="fe">7 ago 2026</div><b>Las Reglas de Carácter General</b></div>
+  </div>
+  <div class="ya">La conversación pública se fue tras las obligaciones de 2027. Mientras tanto, el Reglamento
+    cambió cómo se supervisa y cómo se sanciona, y <b>eso ya está operando.</b></div>
+</section>
+
+<section>
+  <p class="eyebrow">Qué se lleva de aquí</p>
+  <h2>Cuatro respuestas concretas</h2>
+  <div class="lleva">
+    <div class="ll"><span class="i">$</span><div><b>Cuánto cuesta exactamente cada conducta</b><span>Con los importes convertidos a pesos.</span></div></div>
+    <div class="ll"><span class="i">→</span><div><b>Por dónde entra la autoridad</b><span>Y qué puede revisar hacia atrás.</span></div></div>
+    <div class="ll"><span class="i">48</span><div><b>Qué hacer en las primeras horas</b><span>Cuando llega un oficio.</span></div></div>
+    <div class="ll"><span class="i">1</span><div><b>La única salida que dejó la reforma</b><span>Con su plazo.</span></div></div>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">A quién le sirve</p>
+  <h2>A quien realiza una Actividad Vulnerable y a quien responde por ella</h2>
+  <div class="chips">
+    <span class="fuerte">Quien realiza la Actividad Vulnerable</span>
+    <span>La persona Representante</span>
+    <span>La dirección</span>
+    <span>El área legal</span>
+    <span>El contador externo</span>
+  </div>
+  <div class="noes"><b>Qué no es.</b> No es asesoría legal para un caso concreto, y no es interpretación oficial.
+    Es material de análisis y capacitación, con el fundamento de cada afirmación a la vista para que usted pueda verificarlo.</div>
+</section>
+
+<section>
+  <div class="final">
+    <p>En la siguiente lección: cómo está armado el curso y cómo sacarle provecho a la herramienta.</p>
+  </div>
+</section>
+<div class="foot">
+  <p><b>GMC360 · 360Educa.</b> Material de análisis y capacitación. No es asesoría legal ni interpretación oficial.</p>
+</div>
+
+</div>
+</body>
+</html>

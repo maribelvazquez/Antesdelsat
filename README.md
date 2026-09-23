@@ -18,7 +18,8 @@ Se publica desde este repositorio a Netlify: cada archivo que se sube aquí repu
 | | |
 |---|---|
 | `index.html` | El micrositio. Calculadora de sanciones, autodiagnóstico de doce preguntas y tabla de exigibilidad. Funciona sin servidor: se abre en cualquier navegador. |
-| `bienvenida/` | Página de bienvenida del curso. Se sube a 360Educa como lección multimedia con la liga **https://antesdelsat.netlify.app/bienvenida/**. La herramienta no tiene botón hacia ella. |
+| `bienvenida1/` | Bienvenida, parte 1 (la pregunta, la reforma en tres capas, qué se lleva y a quién le sirve). Lección multimedia con la liga **https://antesdelsat.netlify.app/bienvenida1/**. |
+| `bienvenida2/` | Bienvenida, parte 2 (los siete capítulos, cómo se usa la herramienta y las descargas). Lección multimedia con la liga **https://antesdelsat.netlify.app/bienvenida2/**. |
 | `quesigue/` | Página de cierre (programas, cupón SOY360EDUCA y contacto GMC360). Se sube como lección multimedia con la liga **https://antesdelsat.netlify.app/quesigue/**. La herramienta no tiene botón hacia ella. |
 | `descargables/` | Once piezas de trabajo, en PDF, PNG, Word y Excel. Las dos infografías son el material que se reparte en vivo. |
 
